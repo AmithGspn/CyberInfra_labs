@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: ../images/NSF.png
+.. image:: ./images/NSF.png
    :alt: Alternative text for the image
    :align: center
 
