@@ -49,7 +49,7 @@ extern objects (e.g., counters, meters, registers). The APIs contain the informa
 control plane to manipulate tables and objects in the data plane, such as the identifiers of the 
 tables, fields used for matches, keys, action parameters, and others. 
 
-.. image:: /images/Generic_workflow_design.png
+.. image:: images/Generic_workflow_design.png
    :alt: Alternative text for the image
    :align: center
 
@@ -73,7 +73,7 @@ data plane program by the switch daemon (i.e., simple_switch). Finally, we will 
 switch (vendor supplied) used in this lab series for testing and debugging P4 programs is the 
 behavioral model version 2 (BMv2)6. 
 
-.. image:: /images/Workflow_used_in_this_lab.png
+.. image:: images/Workflow_used_in_this_lab.png
    :alt: Alternative text for the image
    :align: center
 
@@ -89,7 +89,7 @@ Lab topology
 Let’s get started with creating a simple Mininet topology using MiniEdit. The topology uses 10.0.0.0/8 
 which is the default network assigned by Mininet. 
 
-.. image:: /images/MiniEdit_shortcut.png
+.. image:: images/MiniEdit_shortcut.png
    :alt: Alternative text for the image
    :align: center
 
@@ -101,7 +101,7 @@ which is the default network assigned by Mininet.
 **Step 1.** A shortcut to MiniEdit is located on the machine’s desktop. Start MiniEdit by double-clicking 
 on MiniEdit’s shortcut. When prompted for a password, type password.
 
-.. image:: /images/Lab_topology.png
+.. image:: images/Lab_topology.png
    :alt: Alternative text for the image
    :align: center
 
@@ -113,7 +113,7 @@ on MiniEdit’s shortcut. When prompted for a password, type password.
 **Step 2.** On MiniEdit’s menu bar, click on File then Open to load the lab’s topology. A window will emerge. 
 Open the folder called lab2, select the file lab2.mn, and click on Open.
 
-.. image:: /images/Opening_a_topology.png
+.. image:: images/Opening_a_topology.png
    :alt: Alternative text for the image
    :align: center
 
@@ -125,7 +125,7 @@ Open the folder called lab2, select the file lab2.mn, and click on Open.
 **Step 3.** The network must be started. Click on the Run button located at the bottom left of MiniEdit’s 
 window to start the emulation. 
 
-.. image:: /images/running_the_emulation.png
+.. image:: images/running_the_emulation.png
    :alt: Alternative text for the image
    :align: center
 
@@ -140,7 +140,7 @@ Verifying connectivity between host h1 and host h2
 **Step 1.** Hold the right-click on host h1 and select Terminal. This opens the terminal of host h1 and allows 
 the execution of commands on that host. 
 
-.. image:: /images/Opening_a_terminal_on_host.png
+.. image:: images/Opening_a_terminal_on_host.png
    :alt: Alternative text for the image
    :align: center
 
@@ -153,7 +153,7 @@ the execution of commands on that host.
 
 ``ping 10.0.0.2 -c 4``
 
-.. image:: /images/Connectivity_test_between_h1_and_h2.png
+.. image:: images/Connectivity_test_between_h1_and_h2.png
    :alt: Alternative text for the image
    :align: center
 
@@ -181,7 +181,7 @@ Loading the programming environment
 
 **Step 1.** Launch a Linux terminal by double-clicking on the Linux terminal icon located on the desktop. 
 
-.. image:: /images/shortcut_to_linux_terminal.png
+.. image:: images/shortcut_to_linux_terminal.png
    :alt: Alternative text for the image
    :align: center
 
@@ -195,7 +195,7 @@ program for this lab is located.
 
 ``code P4_Labs/lab2``
 
-.. image:: /images/Launching_the_editor_and_opening_lab2.png
+.. image:: images/Launching_the_editor_and_opening_lab2.png
    :alt: Alternative text for the image
    :align: center
 
@@ -207,7 +207,7 @@ program for this lab is located.
 **Step 3.** Once the previous command is executed, VS Code will start. Click on *basic.p4* in the file explorer panel on 
 the left hand side to open the P4 program in the editor.
 
-.. image:: /images/Opening_the_progtamming_environment.png
+.. image:: images/Opening_the_progtamming_environment.png
    :alt: Alternative text for the image
    :align: center
 
@@ -218,7 +218,7 @@ the left hand side to open the P4 program in the editor.
 
 **Step 4.** Identify the components of VS Code highlighted in the grey boxes.
 
-.. image:: /images/Vsc_graphical_interface.png
+.. image:: images/Vsc_graphical_interface.png
    :alt: Alternative text for the image
    :align: center
 
@@ -243,7 +243,7 @@ Compiling and loading the P4 program to switch s1
 **Step 1.** In this lab, we will not modify the P4 code. Instead, we will just compile it and download it to the switch s1. 
 To compile the P4 program, issue the following command in the terminal panel inside the VS Code.
 
-.. image:: /images/Compiling_p4.png
+.. image:: images/Compiling_p4.png
    :alt: Alternative text for the image
    :align: center
 
@@ -273,7 +273,7 @@ input the JSON output of the p4c compiler, and the target switch name (e.g., s1)
 
 ``push_to_switch basic.json s1``
 
-.. image:: /images/Downloading_compiled_p4_code.png
+.. image:: images/Downloading_compiled_p4_code.png
    :alt: Alternative text for the image
    :align: center
 
@@ -287,7 +287,7 @@ Verifying the configuration
 
 **Step 1.** Click on the MinEdit tab in the start bar to maximize the window.
 
-.. image:: /images/Maximizing_the_MiniEdit_window.png
+.. image:: images/Maximizing_the_MiniEdit_window.png
    :alt: Alternative text for the image
    :align: center
 
@@ -298,7 +298,7 @@ Verifying the configuration
 
 **Step 2.** Right-click on the P4 switch icon in MiniEdit and select Terminal.
 
-.. image:: /images/Starting_the_terminal_on_s1.png
+.. image:: images/Starting_the_terminal_on_s1.png
    :alt: Alternative text for the image
    :align: center
 
@@ -315,7 +315,7 @@ Verifying the configuration
 
 ``ls``
 
-.. image:: /images/Display_contents_in_s1_directory.png
+.. image:: images/Display_contents_in_s1_directory.png
    :alt: Alternative text for the image
    :align: center
 
@@ -336,7 +336,7 @@ Mapping P4 program’s ports
 
 ``ifconfig``
 
-.. image:: /images/S1_interfaces.png
+.. image:: images/S1_interfaces.png
    :alt: Alternative text for the image
    :align: center
 
@@ -352,7 +352,7 @@ The interface s1-eth1 on the switch s1 connects to the host h2.
 
 ``simple_switch -i 0@s1-eth0 -i 1@s1-eth1 basic.json &``
 
-.. image:: /images/Starting_s1_and_mapping_logical_interfaces.png
+.. image:: images/Starting_s1_and_mapping_logical_interfaces.png
    :alt: Alternative text for the image
    :align: center
 
@@ -361,7 +361,7 @@ The interface s1-eth1 on the switch s1 connects to the host h2.
    <br><br>
    <p style="text-align: center;"><strong>Figure 19:</strong> Starting the switch daemon and mapping the logical interfaces to Linux interfaces.</p>
 
-.. image:: /images/Port_mappings.png
+.. image:: images/Port_mappings.png
    :alt: Alternative text for the image
    :align: center
 
@@ -375,7 +375,7 @@ Loading the rules to the switch
 
 **Step 1.** In switch s1 terminal, press Enter to return the CLI.
 
-.. image:: /images/Returning_to_s1_cli.png
+.. image:: images/Returning_to_s1_cli.png
    :alt: Alternative text for the image
    :align: center
 
@@ -388,7 +388,7 @@ Loading the rules to the switch
 
 ``simple_switch_CLI < ~/lab2/rules.cmd``
 
-.. image:: /images/Loading_table_entries_to_s1.png
+.. image:: images/Loading_table_entries_to_s1.png
    :alt: Alternative text for the image
    :align: center
 
@@ -403,7 +403,7 @@ The figure above shows the table entries described in the file rules.cmd.
 
 ``ping 10.0.0.2 -c 4``
 
-.. image:: /images/performing_a_connectivity_test_between_h1_and_h2.png
+.. image:: images/performing_a_connectivity_test_between_h1_and_h2.png
    :alt: Alternative text for the image
    :align: center
 
