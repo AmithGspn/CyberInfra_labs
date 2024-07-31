@@ -4,7 +4,6 @@
    contain the root `toctree` directive.
 
 .. image:: NSF.png
-   :alt: Alternative text for the image
    :align: center
 
 .. raw:: html
@@ -25,10 +24,13 @@ of programming, compiling, and running a P4 program on a software switch.
 
 .. toctree::
    :maxdepth: 2
-   :hidden:
    :caption: Contents:
 
-   Options/objectives
-   Options/lab_settings
-   Options/lab_roadmap
-   Options/references
+   Options/Introduction_to_P4_and_BMv2/objectives
+   Options/Introduction_to_P4_and_BMv2/lab_settings
+   Options/Introduction_to_P4_and_BMv2/lab_roadmap
+   Options/Introduction_to_P4_and_BMv2/introduction
+   Options/Introduction_to_P4_and_BMv2/lab_topology
+   Options/Introduction_to_P4_and_BMv2/loading_the_p4_program
+   Options/Introduction_to_P4_and_BMv2/configuring_switch_s1
+   Options/Introduction_to_P4_and_BMv2/references
