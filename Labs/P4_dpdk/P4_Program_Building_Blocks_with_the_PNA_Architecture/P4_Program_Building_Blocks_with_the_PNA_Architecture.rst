@@ -1,0 +1,1 @@
+This lab provides guidance to the process of building the P4 coding blocks compatible with the PNA architecture that will be compiled into a DPDK pipeline. In this lab, we will be implementing a simple application in which a packet is sent from a server and forwarded to the client.
