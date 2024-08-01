@@ -17,9 +17,9 @@ Loading the programming environment
 **Figure 9:**  Shortcut to open a Linux terminal.
 
 **Step 2.** In the terminal, type the command below. This command launches the VS Code and opens the directory where the P4 
-program for this lab is located.
+program for this lab is located::
 
-``code P4_Labs/lab2``
+    code P4_Labs/lab2
 
 .. image:: images/Launching_the_editor_and_opening_lab2.png
 
@@ -75,9 +75,9 @@ switch daemon.
 
 **Step 2.** Type the command below in the terminal panel to download the basic.json file to the switch s1. The script accepts as 
 input the JSON output of the p4c compiler, and the target switch name (e.g., s1). If asked for a password, type the password 
-``password``.
+``password``::
 
-``push_to_switch basic.json s1``
+    push_to_switch basic.json s1
 
 **Figure 14:** Downloading the compiled program to switch s1.
 
@@ -100,9 +100,9 @@ Verifying the configuration
    The switch is running on an Ubuntu image started on a Docker container. Thus, you will be able to execute any 
    Linux command on the switch’s terminal. 
 
-**Step 3.** Issue the following command to list the files in the current directory.
+**Step 3.** Issue the following command to list the files in the current directory::
 
-``ls``
+    ls
 
 .. image:: images/Display_contents_in_s1_directory.png
 

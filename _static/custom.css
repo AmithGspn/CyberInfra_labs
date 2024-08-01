@@ -1,0 +1,10 @@
+.wy-side-nav-search .icon.icon-home, 
+.wy-side-nav-search .wy-side-nav-title, 
+.wy-side-nav-search h3, 
+.wy-side-nav-search h4 {
+    color: #050505;  
+}
+
+.wy-menu-vertical header, .wy-menu-vertical p.caption {
+    color: #FFFDD0; 
+}

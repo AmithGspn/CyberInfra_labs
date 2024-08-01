@@ -39,9 +39,9 @@ the execution of commands on that host.
 
 **Figure 7:** Opening a terminal on host h1.
 
-**Step 2.** Test the connectivity between host h1 and host h2 by issuing the command below.
+**Step 2.** Test the connectivity between host h1 and host h2 by issuing the command below::
 
-``ping 10.0.0.2 -c 4``
+     ping 10.0.0.2 -c 4
 
 **Figure 8:** Performing a connectivity test between host h1 and host h2.
 
