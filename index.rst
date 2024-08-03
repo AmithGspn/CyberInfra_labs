@@ -25,3 +25,8 @@ Library
    Labs/Introduction_to_P4_and_BMv2/Introduction_to_p4_and_BMv2
    Labs/P4_dpdk/Introduction_to_P4_DPDK/Introduction_to_P4_DPDK
    Labs/P4_dpdk/P4_Program_Building_Blocks_with_the_PNA_Architecture/P4_Program_Building_Blocks_with_the_PNA_Architecture
+   Labs/P4-DPDK/Checksum_Recalculation_and_Packet_Deparsing/Checksum_Recalculation_and_Packet_Deparsing
+   Labs/P4-DPDK/Introduction_to_Match_action_Tables_(Part_1)/Introduction_to_Match_action_Tables_(Part_1)
+   Labs/P4-DPDK/Introduction_to_Match_action_Tables_(Part_2)/Introduction_to_Match_action_Tables_(Part_2)
+   Labs/P4-DPDK/Populating_and_Managing_Match_action_Tables_at_Runtime/Populating_and_Managing_Match_action_Tables_at_Runtime
+   Labs/P4-DPDK/PNA_Parser_Implementation/PNA_Parser_Implementation

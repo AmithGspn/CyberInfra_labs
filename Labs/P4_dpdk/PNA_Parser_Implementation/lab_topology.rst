@@ -1,13 +1,13 @@
 lab topology
 ============
 
-Consider Figure 5. Two network namespaces, h1 and h2, are linked to the running P4-DPDK pipeline, enabling 
-connectivity between two namespaces. The network environments of hosts h1 and h2 are isolated from each other 
-and the root namespace in which a P4-DPDK pipeline is running9.
+Consider Figure 6. Two network namespaces, h1 and h2, are linked to the running P4-DPDK pipeline, 
+enablingconnectivity between two namespaces. The network environments of hosts h1 and h2 are isolated 
+from each other and the root namespace. 
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 5:** Lab topology.
+**Figure 6:** Lab topology.
 
 Lab settings
 ++++++++++++

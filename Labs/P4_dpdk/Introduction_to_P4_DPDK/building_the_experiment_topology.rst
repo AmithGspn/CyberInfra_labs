@@ -76,7 +76,48 @@ be executed in namespace ``h1``.
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 34:** Turning up the interface, *dtap1*.
+**Figure 35:** Turning up the interface, *dtap1*.
 
 In the figure above, the command ``ip link set dtap1 up`` will be executed in namespace h2.
 
+Assigning IP addresses to the interfaces
+++++++++++++++++++++++++++++++++++++++++
+
+**Step 1.** Configure the dtap0 interface in the namespace *h1* with an IP address and subnet mask 
+by typing the following command.::
+
+    ip netns exec h1 ifconfig dtap0 192.168.10.1/24
+
+.. image:: images/Generic_workflow_design.png
+
+**Figure 36:** Configuring the interface, *dtap0*.
+
+**Step 2.** Configure the dtap1 interface in the namespace *h2* with an IP address and subnet mask by 
+typing the following command.::
+
+    ip netns exec h2 ifconfig dtap1 192.168.10.2/24
+
+.. image:: images/Generic_workflow_design.png
+
+**Figure 37:** Configuring the interface, *dtap1*.
+
+Establishing connection between namespaces
+++++++++++++++++++++++++++++++++++++++++++
+
+**Step 1.** Add a static ARP entry to the ARP cache in h1 to associate the IP address in the namespace 
+h2 *192.168.10.2* with its MAC address *00:00:00:00:00:02*.::
+
+    ip netns exec h1 arp -s 192.168.10.2 00:00:00:00:00:02  
+
+.. image:: images/Generic_workflow_design.png
+
+**Figure 38:** Adding a static ARP entry in host h1.
+
+**Step 2.** Add a static ARP entry to the ARP cache in h2 to associate the IP address in the namespace 
+h1 *192.168.10.1* with its MAC address *00:00:00:00:00:01*.::
+
+    ip netns exec h2 arp -s 192.168.10.1 00:00:00:00:00:01
+
+.. image:: images/Generic_workflow_design.png
+
+**Figure 39:** Adding a static ARP entry in host h2.
