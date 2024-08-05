@@ -1,7 +1,7 @@
 Lab settings
 ++++++++++++
 
-Table 1 contains the credentials of the virtual machine used for this lab. 
+The information in Table 1 provides the credentials of the Client machine. 
 
 .. table:: Table 1: Credentials to access Client machine
    :align: center
@@ -11,5 +11,3 @@ Table 1 contains the credentials of the virtual machine used for this lab.
    ==========  ===========  ============
    Client      admin        password
    ==========  ===========  ============
-
-   

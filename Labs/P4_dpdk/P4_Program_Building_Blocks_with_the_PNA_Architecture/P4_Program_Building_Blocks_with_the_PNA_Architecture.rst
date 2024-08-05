@@ -11,12 +11,12 @@ sent from a server and forwarded to the client.
    :caption: Content:
    :hidden:
 
-    objectives
-    lab_settings    
-    lab_roadmap
-    introduction_to_P4_architecture
-    lab_topology
-    writing_the_P4_code
-    building_the_P4-DPDK_pipeline_and_the_lab_topology
-    testing_connectivity
-    references
+   objectives
+   lab_settings    
+   lab_roadmap
+   introduction_to_P4_architecture
+   lab_topology
+   writing_the_P4_code
+   building_the_P4_DPDK_pipeline_and_the_lab_topology
+   testing_connectivity
+   references
