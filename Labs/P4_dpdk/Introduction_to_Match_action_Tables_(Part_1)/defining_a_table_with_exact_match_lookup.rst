@@ -28,7 +28,7 @@ and opens the directory where the P4 program for this lab is located::
 
     code P4DPDK_labs/lab4 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/5.png
 
 **Figure 5:** Loading VS Code in the lab4 directory.
 
@@ -38,7 +38,7 @@ Programming the exact table in the control block
 **Step 1.** Click on the control.p4 file to display the contents of the file. Use the file 
 explorer on the left-hand side of the screen to locate the file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/6.png
 
 **Figure 6:** Inspecting the control.p4 file.
 
@@ -59,7 +59,7 @@ the MainControl control block::
     send_to_port(port_id);
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/7.png
 
 **Figure 7:** Defining the ``forward`` action.
 
@@ -75,7 +75,7 @@ block::
     drop_packet();
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/8.png
 
 **Figure 8:** Defining the ``drop`` action.
 
@@ -88,8 +88,7 @@ body of the MainControl control block::
 
 }
 
-.. image:: images/Generic_workflow_design.png
-
+.. image:: images/9
 **Figure 9:** Declaring the ``forwarding`` table.
 
 Tables require keys and actions. In the next step, we will define a key.
@@ -100,7 +99,7 @@ Tables require keys and actions. In the next step, we will define a key.
     hdr.ipv4.dstAddr:exact;
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/10.png
 
 **Figure 10:** Specifying the key and the match type.
 
@@ -116,7 +115,7 @@ in this table::
     drop;
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/11.png
 
 **Figure 11:** Adding the actions to the ``forwarding`` table.
 
@@ -126,7 +125,7 @@ can be inserted into this table from the control plane::
 
     size = 1024;
      
-.. image:: images/Generic_workflow_design.png
+.. image:: images/12.png
 
 **Figure 12:** Specifying the size of the ``forwarding`` table.
 
@@ -142,7 +141,7 @@ sequence of tables to be invoked, among other packet processing instructions::
     }
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/13.png
 
 **Figure 13:** Defining the ``apply`` block.
 
@@ -158,7 +157,7 @@ Compiling the P4 program
 **Step 1.** Open a new terminal in VS Code by clicking on Terminal in the menu bar and then New Terminal in the 
 drop-down menu.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/14.png
 
 **Figure 14:** Opening a new VS Code terminal.
 
@@ -166,7 +165,7 @@ drop-down menu.
 
     p4c-dpdk --arch pna main.p4 -o lab4.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/15.png
 
 **Figure 15:** Compiling the P4 program using the VS Code terminal.
 

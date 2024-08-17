@@ -5,7 +5,7 @@ This section shows the steps required to run the P4-DPDK along with building the
 lab topology. The step-by-step procedure is explained in detail in a previous lab. 
 In this lab, the procedure is automated.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/16.png
 
 **Figure 16:** Maximizing Linux terminal window.
 
@@ -15,7 +15,7 @@ will not be visible as you type it::
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/17.png
 
 **Figure 17:** Entering root mode.
 
@@ -23,7 +23,7 @@ will not be visible as you type it::
 
     cd P4DPDK_labs/lab4  
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/18.png
 
 **Figure 18:** Navigating to the lab4 directory.
 
@@ -31,7 +31,7 @@ will not be visible as you type it::
 
      ./run_pipeline.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/19.png
 
 **Figure 19:** Running P4-DPDK pipeline.
 
@@ -49,7 +49,7 @@ Inspecting table entries
 **Step 1.** Click on the new tab button at the top left of the terminal while running the 
 pipeline.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/20.png
 
 **Figure 20:** Opening a new terminal in a new tab.
 
@@ -59,7 +59,7 @@ as you type it::
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/21.png
 
 **Figure 21:** Entering root mode.
 
@@ -67,7 +67,7 @@ as you type it::
 
     cd P4DPDK_labs/lab4  
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/22.png
 
 **Figure 22:** Navigating to the lab4 directory.
 
@@ -76,7 +76,7 @@ as you type it::
 
     cat rules.txt
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/23.png
 
 **Figure 23:**  Inspecting the rules.txt file.
 
@@ -98,7 +98,7 @@ Building the lab topology
 
     ./set_topology.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/24.png
 
 **Figure 24:**  Setting the lab topology.
 

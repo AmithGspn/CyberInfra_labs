@@ -8,14 +8,14 @@ Modifying the P4 code
 
 **Step 1.** Click on the VS Code icon to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/29.png
 
 **Figure 29:** Maximizing VS Code.
 
 **Step 2.** Click on the headers.p4 file to display the contents of the file. Use the 
 file explorer on the left-hand side of the screen to locate the file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/30.png
 
 **Figure 30:** Inspecting the headers.p4 file.
 
@@ -27,7 +27,7 @@ below in the designated empty space in line 8::
 
     const ExpireTimeProfileId_t EXPIRE_TIME_PROFILE_ID = (ExpireTimeProfileId_t) 4;
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/31.png
 
 **Figure 31:** Defining the ``EXPIRE_TIME_PROFILE_ID`` constant.
 
@@ -46,7 +46,7 @@ in the designated empty space in line 9::
     PortId_t port_id;
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/32.png
 
 **Figure 32:** Defining the ``forward_action_keys`` structure.
 
@@ -55,7 +55,7 @@ in the designated empty space in line 9::
 **Step 6.** Click on the control.p4 file to display the contents of the file. Use the file 
 explorer on the left-hand side of the screen to locate the file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/33.png
 
 **Figure 33:** Inspecting the control.p4 file.
 
@@ -69,7 +69,7 @@ below inside the MainControl control block below the defined actions.::
                               expire_time_profile_id = EXPIRE_TIME_PROFILE_ID);
     }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/34.png
 
 **Figure 34:** Defining the ``forward_miss`` action.
 
@@ -96,7 +96,7 @@ the ``action_params`` equal to the defined structure forward_params. Finally, th
 
     Forward_miss;
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/35.png
 
 **Figure 35:** Adding the ``forward_miss`` action.
 
@@ -105,7 +105,7 @@ the ``action_params`` equal to the defined structure forward_params. Finally, th
      add_on_miss = true;
     default_action = forward_miss;
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/36.png
 
 **Figure 36:** Enabling the ``add_on_miss `` feature.
 
@@ -123,7 +123,7 @@ in the terminal panel inside VS Code::
 
     p4c-dpdk --arch pna main.p4 -o lab4.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/37.png
 
 **Figure 37:** Compiling the P4 program using the VS Code terminal.
 
@@ -138,7 +138,7 @@ Now that all the required scripts are prepared, we can run the pipeline.
 
 **Step 1.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/38.png
 
 **Figure 38:** Maximizing Linux terminal window.
 
@@ -146,7 +146,7 @@ Step 2. Run the pipeline by typing the following command::
 
     ./run_pipeline.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/39.png
 
 **Figure 39:** Running P4-DPDK pipeline.
 
@@ -159,7 +159,7 @@ The run_pipeline.sh script is a shell script that automates the process of runni
 
 **Step 3.** Switch to the separate terminal tab. 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/40.png
 
 **Figure 40:** Switching to a separate terminal.
 
@@ -167,13 +167,13 @@ The run_pipeline.sh script is a shell script that automates the process of runni
 
     cat lab4.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/41.png
 
 **Figure 41:** Inspecting lab4.spec file.
 
 Scroll up the see the forwarding learner table properties.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/42.png
 
 **Figure 42:** Timeout profiles in lab4.spec file.
 
@@ -185,7 +185,7 @@ this lab. Therefore, the expiration time profile with profile ID 4 corresponds t
 
     ./set_topology.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/43.png
 
 **Figure 43:** Setting the lab topology.
 

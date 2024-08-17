@@ -10,7 +10,7 @@ Inspect DPDK pipeline interfaces and stats
 
     telnet 0.0.0.0 8086
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/30.png
 
 **Figure 30:** Entering the pipeline CLI.
 
@@ -20,7 +20,7 @@ In the pipeline CLI, inspect the interface configuration by typing the following
 
     ethdev show
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/31.png
 
 **Figure 31:** Inspecting interfaces.
 
@@ -37,7 +37,7 @@ and the number of dropped packets ``misses`` for each.
 
     pipeline PIPELINE0 stats
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/32.png
 
 **Figure 32:** Inspecting pipeline statistics.
 
@@ -57,7 +57,7 @@ Adding rules to match-action tables
 
     pipeline PIPELINE0 table forwarding_exact add rules_exact.txt
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/33.png
 
 **Figure 33:** Load the *rules_exact.txt* file to the forwarding_exact table.
 
@@ -72,7 +72,7 @@ To add rules to a table the *pipeline table add* function is used. This command 
 
     pipeline PIPELINE0 table forwarding_lpm add rules_lpm.txt
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/34.png
 
 **Figure 34:** Load the *rules_lpm.txt* file to the *forwarding_lpm* table.
 
@@ -80,7 +80,7 @@ To add rules to a table the *pipeline table add* function is used. This command 
 
     pipeline PIPELINE0 commit
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/35.png
 
 **Figure 35:** Apply all changes to the pipeline.
 
@@ -91,7 +91,7 @@ Inspecting packet count in pipeline stats
 
 **Step 1.** Open a separate terminal tab.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/36.png
 
 **Figure 36:** Opening a new terminal tab.
 
@@ -100,7 +100,7 @@ Note that the password will not be visible as you type it.::
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/37.png
 
 **Figure 37:** Entering root mode.
 
@@ -108,7 +108,7 @@ Note that the password will not be visible as you type it.::
 
     cd P4DPDK_labs/lab6
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/38.png
 
 **Figure 38:** Navigating to the lab6 directory.
 
@@ -117,7 +117,7 @@ script *sender.py*.
 
     ip netns exec h1 python3 sender.py -s h1 -d 192.168.20.2
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/39.png
 
 **Figure 39:** Sending a packet from h1 to h2.
 
@@ -131,7 +131,7 @@ address to the longest prefix which is in this case 192.168.20.0.
 
 **Step 5.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/40.png
 
 **Figure 40:** Switch back to the DPDK pipeline terminal.
 
@@ -139,7 +139,7 @@ address to the longest prefix which is in this case 192.168.20.0.
     Observe the DPDK logs at the bottom of the terminal. These logs correspond to the packet processing function executed in the 
     .spec file generated when the P4 code is compiled.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/41.png
 
 **Figure 41:** Logs corresponding to the packet sent.
 
@@ -152,13 +152,13 @@ packet to port 1 which corresponds to host 2.
 
 **Step 6.** For a more readable output press *enter* in the terminal a few times (five times).
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/42.png
 
 **Figure 42:** Providing space in the terminal.
 
 **Step 7.** Switch back to the terminal tab running the interactive CLI.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/43.png
 
 **Figure 43:** Open the pipeline CLI terminal.
 
@@ -166,7 +166,7 @@ packet to port 1 which corresponds to host 2.
 
     pipeline PIPELINE0 stats
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/44.png
 
 **Figure 44:** Inspecting pipeline statistics.
 
@@ -184,7 +184,7 @@ Removing match-action table rules at runtime
 
     pipeline PIPELINE0 table forwarding_exact delete rules_exact.txt
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/45.png
 
 **Figure 45:** Deleting table rules.
 
@@ -201,7 +201,7 @@ To delete rules from a table, the *pipeline table delete* function is used. This
 
     pipeline PIPELINE0 commit
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/46.png
 
 **Figure 46:** Apply all changes to the pipeline.
 
@@ -211,7 +211,7 @@ The ``pipeline commit`` function applies the changes made to the designated pipe
 
 **Step 3.** Switch back to the terminal tab in which the Python script was executed.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/47.png
 
 **Figure 47:** Switching back to the Python terminal.
 
@@ -219,19 +219,19 @@ The ``pipeline commit`` function applies the changes made to the designated pipe
 
     ip netns exec h1 python3 sender.py -s h1 -d 192.168.30.1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/48.png
 
 **Figure 48:** Sending a packet from h1 to h3.
 
 **Step 5.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/49.png
 
 **Figure 49:** Switch back to the DPDK pipeline terminal.
 
 Observe the DPDK logs at the bottom of the terminal.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/50.png
 
 **Figure 50:** Logs corresponding to the packet sent.
 
@@ -242,7 +242,7 @@ The log in the second grey box indicates that one packet has been dropped.
 
 **Step 6.** Switch back to the terminal tab running the interactive CLI.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/52.png
 
 **Figure 51:** Open the pipeline CLI terminal.
 
@@ -250,7 +250,7 @@ The log in the second grey box indicates that one packet has been dropped.
 
     pipeline PIPELINE0 stats
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/52.png
 
 **Figure 52:** Inspecting pipeline statistics.
 
@@ -264,13 +264,13 @@ exact matching of the destination address of host 3 is deleted.
 
 **Step 8.** Close the pipeline CLI and the telnet session by pressing ``ctrl+]`` and then type the ``quit`` command.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/53.png
 
 **Figure 53:** Closing pipeline and telnet session.
 
 **Step 9.** Switch back to the terminal tab running the DPDK pipeline and press ``ctrl+c`` to terminate the process.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/54.png
 
 **Figure 54:** Stopping the running pipeline.
 

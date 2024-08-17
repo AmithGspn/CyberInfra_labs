@@ -11,7 +11,7 @@ provided Python script *sender.py*::
 
     ip netns exec h1 python3 sender.py -s h1 -d 192.168.30.1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/24.png
 
 **Figure 24:**  Sending a packet from h1 to h3.
 
@@ -23,7 +23,7 @@ Running the Python script requires two parameters:
 **Step 2.** Switch back to the terminal tab in which the 
 DPDK pipeline is running to observe the result.
 
- .. image:: images/Generic_workflow_design.png
+ .. image:: images/25.png
 
 **Figure 25:**  Switch back to the DPDK pipeline terminal.
 
@@ -33,7 +33,7 @@ DPDK pipeline is running to observe the result.
     executed in the .spec file generated when the P4 code is 
     compiled. 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/26.png
 
 **Figure 26:**  Logs corresponding to the packet sent.
 
@@ -55,14 +55,14 @@ packet to port 2 which corresponds to host 3.
 **Step 3.** For a more readable output press enter in the 
 terminal a few times (five times).
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/27.png
 
 **Figure 27:** Providing space in the terminal.
 
 **Step 4.**Switch back to the terminal tab in which the Python 
 script was executed.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/28.png
 
 **Figure 28:** Switching back to the Python terminal.
 
@@ -76,20 +76,20 @@ and TCP header from h1 to h3 over the destination IP address
 
     ip netns exec h1 python3 sender.py -s h1 -d 192.168.30.3
  
-.. image:: images/Generic_workflow_design.png
+.. image:: images/29.png
 
 **Figure 29:**  Sending a packet from h1 to h3.
 
 **Step 2.** Switch back to the terminal tab in which the DPDK 
 pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/30.png
 
 **Figure 30:** Switch back to the DPDK pipeline terminal.
 
 Observe the DPDK logs at the bottom of the terminal.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/31.png
 
 **Figure 31:** Logs corresponding to the packet sent.
 
@@ -105,14 +105,14 @@ grey box indicates that one packet has been dropped.
 **Step 3.**For a more readable output press enter in the terminal 
 a few times (five times).
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/32.png
 
 **Figure 32:** Providing space in the terminal.
 
 **Step 4.** Switch back to the terminal tab in which the Python 
 script was executed.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/33.png
 
 **Figure 33:** Switching back to the Python terminal.
 
@@ -127,7 +127,7 @@ Python script *sender.py*::
 
     ip netns exec h1 python3 sender.py -s h1 -d 192.168.20.3
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/34.png
 
 **Figure 34:**  Sending a packet from h1 to h2.
 
@@ -138,13 +138,13 @@ IP address to the longest prefix which is in this case 192.168.20.0.
 **Step 2.** Switch back to the terminal tab in which the DPDK 
 pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png 
+.. image:: images/35.png 
 
 **Figure 35:** Switch back to the DPDK pipeline terminal.
 
 Observe the DPDK logs at the bottom of the terminal.
 
-.. image:: images/Generic_workflow_design.png 
+.. image:: images/36.png 
 
 **Figure 36:** Logs corresponding to the packet sent.
 
@@ -167,7 +167,7 @@ packet to port 1 which corresponds to host 2.
 
 **Step 3. **Stop the DPDK pipeline by pressing ``ctrl+c``. 
 
-.. image:: images/Generic_workflow_design.png 
+.. image:: images/37.png 
     
 **Figure 37:**  Stopping the DPDK pipeline.
 

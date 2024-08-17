@@ -24,13 +24,13 @@ for this lab is located.::
 
     code P4DPDK_labs/lab6
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/4.png
 
 **Figure 4:** Loading VS Code in the lab6 directory.
 
 **Step 3.** Inspect the tables in the *control.p4* file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/5.png
 
 **Figure 5:** Inspecting the *control.p4* file.
 
@@ -43,13 +43,13 @@ Preparing rules files
 
 **Step 1.** Click on the Create *new file* icon to create a new file in the lab6 directory.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/6.png
 
 **Figure 6:** Creating a new file.
 
 **Step 2.** Creating a new file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/7.png
 
 **Figure 7:** Naming the file *rules_exact.txt*.
 
@@ -59,7 +59,7 @@ must be represented in hexadecimal format.
 
 **Step 3.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/8.png
 
 **Figure 8:** Maximizing Linux terminal window.
 
@@ -68,7 +68,7 @@ terminal to convert an IPv4 address to hexadecimal.::
 
     gethostip -x 192.168.30.1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/9.png
     
 **Figure 9.** Converting the IP address to hexadecimal.
 
@@ -79,7 +79,7 @@ address to be converted to hexadecimal.
 
 **Step 5.** Click on the VScode tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/10.png
 
 **Figure 10.** Maximizing VScode window.
 
@@ -88,7 +88,7 @@ code in the rules_exact.txt file.::
 
     match 0xC0A81E01 action forward_exact dstAddr 0x3 port_id 0x2
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/11.png
 
 **Figure 11.** Adding exact matching rule.
 
@@ -106,13 +106,13 @@ Defining a rule requires 3 parameters:
 
 **Step 8.** Click on the *Create new file* icon to create a new file in the *lab6* directory.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/12.png
 
 **Figure 12.** Creating a new file.
 
 **Step 9.** Give to the file the name *rules_lpm.txt*.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/13.png
 
 **Figure 13.** Naming the file rules_lpmt.txt.
 
@@ -121,7 +121,7 @@ Matching (LPM) algorithm. In LPM rules, the network IP address and the subnet mu
 
 **Step 10.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/14.png
 
 **Figure 14.** Maximizing Linux terminal window.
 
@@ -129,7 +129,7 @@ Matching (LPM) algorithm. In LPM rules, the network IP address and the subnet mu
 
     gethostip -x 192.168.10.0
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/15.png
 
 **Figure 15.** Converting the IP address to hexadecimal.
 
@@ -139,7 +139,7 @@ The IP address 192.168.10.0 is represented as C0A80A00 in hexadecimal format.
 
     gethostip -x 192.168.20.0
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/16.png
 
 **Figure 16.** Converting the IP address to hexadecimal.
 
@@ -149,7 +149,7 @@ The IP address 192.168.20.0 is represented as C0A81400 in hexadecimal format.
 
     gethostip -x 255.255.255.0
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/17.png
 
 **Figure 17.** Converting the IP address to hexadecimal.
 
@@ -161,7 +161,7 @@ FFFFFF00 in hexadecimal format.
 
 **Step 14.** Click on the VScode tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/18.png
 
 **Figure 18.** Maximizing VScode window.
 
@@ -172,7 +172,7 @@ table for exact matching. Type the following code in the rules_lpm.txt file.::
 
     match 0xC0A81400/0xffffff00 action forward_lpm dstAddr 0x2 port_id 0x1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/19.png
 
 **Figure 19.** Adding LPM rule.
 
@@ -200,7 +200,7 @@ Compiling the P4 program
 **Step 1.** Open a new terminal in VS Code by clicking on Terminal in the menu bar and then New Terminal 
 in the drop-down menu.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/20.png
 
 **Figure 20.** Opening a new VS Code terminal.
 
@@ -208,7 +208,7 @@ in the drop-down menu.
 
     p4c-dpdk --arch pna main.p4 -o lab6.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/21.png
 
 **Figure 21.** Compiling the P4 program using the VS Code terminal.
 

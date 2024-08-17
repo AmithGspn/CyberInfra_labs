@@ -7,14 +7,14 @@ provided Python script sender.p::
 
     ip netns exec h1 python3 sender.py -s h1 -d 192.168.10.2
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/44.png
 
 **Figure 44:** Sending a packet from h1 to h2.
 
 **Step 2.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the 
 result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/45.png
 
 **Figure 45:** Switch back to the DPDK pipeline terminal.
 
@@ -23,7 +23,7 @@ result.
     Observe the DPDK logs at the bottom of the terminal. These logs correspond to the packet 
     processing function executed in the .spec file generated when the P4 code is compiled. 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/46.png
 
 **Figure 46:** Logs corresponding to the packet sent.
 
@@ -33,13 +33,13 @@ the table.
 
 **Step 3.** For a more readable output press enter in the terminal a few times (five times).
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/47.png
 
 **Figure 47:** Logs corresponding to the packet sent.
 
 **Step 4.** Switch back to the terminal tab in which we run the Python command.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/48.png
 
 **Figure 48:** Switch back to a separate terminal tab.
 
@@ -49,19 +49,19 @@ script sender.py::
 
     ip netns exec h1 python3 sender.py -s h1 -d 192.168.10.2
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/49.png
 
 **Figure 49:** Sending a packet from h1 to h2.
 
 **Step 6.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/50.png
 
 **Figure 50:** Switch back to the DPDK pipeline terminal.
 
 Observe the DPDK logs at the bottom of the terminal. 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/51.png
 
 **Figure 51:** Logs corresponding to the packet sent.
 
@@ -72,7 +72,7 @@ sending one packet to port 1 as assigned in the forward_miss action.
 
 **Step 7.** Stop the DPDK pipeline by pressing ``ctrl+c``. 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/52.png
 
 **Figure 52:** Stopping the DPDK pipeline.
 

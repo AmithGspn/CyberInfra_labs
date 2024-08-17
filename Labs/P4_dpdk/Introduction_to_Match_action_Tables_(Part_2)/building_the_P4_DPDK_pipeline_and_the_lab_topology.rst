@@ -14,7 +14,7 @@ Now that all the required scripts are prepared, we can run the pipeline.
 **Step 1.** Click on the terminal tab in the start bar to maximize the 
 window.
 
- .. image:: images/Generic_workflow_design.png
+ .. image:: images/14.png
     
 **Figure 14:**  Maximizing Linux terminal window.
 
@@ -24,7 +24,7 @@ enter. Note that the password will not be visible as you type it::
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/15.png
 
 **Figure 15:** Entering root mode.
 
@@ -32,7 +32,7 @@ enter. Note that the password will not be visible as you type it::
   
     cd P4DPDK_labs/lab5  
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/16.png
 
 **Figure 16:** Navigating to the lab5 directory.
 
@@ -40,7 +40,7 @@ enter. Note that the password will not be visible as you type it::
 
     ./run_pipeline.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/17.png
 
 **Figure 17.** Running P4-DPDK pipeline.
 
@@ -60,7 +60,7 @@ Inspecting table entries
 **Step 1.** Click on the new tab button at the top left of the terminal 
 while running the pipeline.
 
- .. image:: images/Generic_workflow_design.png
+ .. image:: images/18.png
 
 **Figure 18:** Opening a new terminal in a new tab.
 
@@ -70,7 +70,7 @@ Note that the password will not be visible as you type it::
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png 
+.. image:: images/19.png 
 
 **Figure 19.** Entering root mode.
 
@@ -78,7 +78,7 @@ Note that the password will not be visible as you type it::
 
     cd P4DPDK_labs/lab5  
 
-.. image:: images/Generic_workflow_design.png 
+.. image:: images/20.png 
  
 **Figure 20:** Navigating to the lab5 directory.
 
@@ -87,7 +87,7 @@ match-action table, we will enter the following command::
 
     cat rules_exact.txt
 
-.. image:: images/Generic_workflow_design.png 
+.. image:: images/21.png 
  
 **Figure 21:** Inspecting the *rules_exact.txt* file.
 
@@ -112,7 +112,7 @@ match-action table, we will enter the following command::
 
     cat rules_lpm.txt
 
-.. image:: images/Generic_workflow_design.png 
+.. image:: images/22.png 
  
 **Figure 22:** Inspecting the *rules_lpm.txt* file.
 
@@ -145,7 +145,7 @@ Building the lab topology
 
     ./set_topology.sh
 
-.. image:: images/Generic_workflow_design.png 
+.. image:: images/23.png 
 
 **Figure 23:** Setting the lab topology.
 

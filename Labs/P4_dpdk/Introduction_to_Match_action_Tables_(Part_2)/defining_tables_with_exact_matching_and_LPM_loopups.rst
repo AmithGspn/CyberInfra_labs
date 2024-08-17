@@ -31,7 +31,7 @@ VS Code and opens the directory where the P4 program for this lab is located::
 
     code P4DPDK_labs/lab5 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/4.png
 
 **Figure 4:** Loading VS Code in the lab5 directory
 
@@ -41,7 +41,7 @@ Programming the control block
 Step 1. Click on the *control.p4* file to display the contents of the file. Use 
 the file explorer on the left-hand side of the screen to locate the file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/5.png
 
 **Figure 5:** Inspecting the *control.p4* file
 
@@ -59,7 +59,7 @@ Insert the code below inside the *MainControl* control block::
     hdr.ipv4.ttl = hdr.ipv4.ttl - 1;
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/6.png
 
 **Figure 6:** Defining the ``forward_exact`` action.
 
@@ -94,7 +94,7 @@ nsert the code below inside the *MainControl* control block::
     hdr.ipv4.ttl = hdr.ipv4.ttl - 1;
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/7.png
 
 **Figure 7:** Defining the ``forward_lpm`` action.
 
@@ -111,7 +111,7 @@ MainControl control block::
     drop_packet();
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/8.png
 
 **Figure 8:** Defining the ``drop`` action.
 
@@ -131,7 +131,7 @@ following piece of code inside the body of the *MainControl* control block::
     size = 1024;
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/9.png
 
 **Figure 9:** Declaring the ``forwarding_exact`` table.
 
@@ -158,7 +158,7 @@ and hence,those actions will be listed inside the table definition.::
     default_action = drop();
 }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/10.png
 
 **Figure 10:** Adding the actions to the ``forwarding_lpm`` table.
 
@@ -183,7 +183,7 @@ invoked, in addition to other packet processing instructions::
         }
     }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/11.png
 
 **Figure 11:** Defining the ``apply`` block.
 
@@ -204,7 +204,7 @@ Compiling the P4 program
 **Step 1.** Open a new terminal in VS Code by clicking on *Terminal* in the menu bar 
 and then *New Terminal* in the drop-down menu.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/12.png
 
 **Figure 12:** Opening a new VS Code terminal.
 
@@ -213,7 +213,7 @@ panel inside VS Code::
 
     p4c-dpdk --arch pna main.p4 -o lab5.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/13.png
 
 **Figure 13:** Compiling the P4 program using the VS Code terminal.
 
