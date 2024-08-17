@@ -1,9 +1,9 @@
 Objectives
 ==========
-By the end of this lab, students should be able to:
 
-#. Define the need for SDN and data plane programmability.
-#. Understand the structure of a P4 program.
-#. Compile a simple P4 program and deploy it to a software switch.
-#. Start the switch daemon and allocate virtual interfaces to the switch.
-#. Perform a connectivity test to verify the correctness of the program.
+By the end of this lab, you should be able to:
+
+#.	Understand what match-action tables are used for.
+#.	Describe the basic syntax of a match-action table.
+#.	Implement two tables in a P4.
+#.	Trace a table’s misses and hits.

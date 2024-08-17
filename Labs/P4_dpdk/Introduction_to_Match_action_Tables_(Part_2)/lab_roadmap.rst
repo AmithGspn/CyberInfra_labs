@@ -1,10 +1,10 @@
-
 Lab roadmap
 ===========
 
 This lab is organized as follows: 
 
-#. Section 1: Introduction.
-#. Section 2: Lab topology.
-#. Section 3: Loading the P4 program.
-#. Section 4: Configuring switch s1.
+#.	Section 1: Introduction.
+#.	Section 2: Lab topology.
+#.	Section 3: Defining tables with exact matching and LPM lookups.
+#.	Section 4: Building the P4-DPDK pipeline and the lab topology.
+#.	Section 5: Testing the application.

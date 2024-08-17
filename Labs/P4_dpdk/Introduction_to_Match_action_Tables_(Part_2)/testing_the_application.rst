@@ -1,127 +1,174 @@
 Testing the application
 =======================
 
-**Step 1.** To test the application, we will send a packet with an ethernet header from h1 to h2 
-by running the provided Python script sender.py
+Testing exact matching
+~~~~~~~~~~~~~~~~~~~~~~
 
-    ip netns exec h1 python3 sender.py -r h2 -ph eth
+**Step 1.** To test exact matching, we will send a packet 
+with an ethernet, IPv4, and TCP header from h1 to h3 over 
+the destination IP address 192.168.30.1 by running the 
+provided Python script *sender.py*::
+
+    ip netns exec h1 python3 sender.py -s h1 -d 192.168.30.1
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 31.** Sending a packet with an ethernet header from h1 to h2.
+**Figure 24:**  Sending a packet from h1 to h3.
 
 Running the Python script requires two parameters:
 
-* ``-r``: receiving host (h1 or h2)
-* ``-ph``: included packet headers (eth or eth/ipv4 or eth/ipv4/tcp)
+*	``-s``: Sender (h1 or h2 or h3)
+*	``-d``: Destination IP Address
 
-**Step 2.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
+**Step 2.** Switch back to the terminal tab in which the 
+DPDK pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+ .. image:: images/Generic_workflow_design.png
 
-**Figure 32.** Switch back to the DPDK pipeline terminal.
+**Figure 25:**  Switch back to the DPDK pipeline terminal.
 
-.. note::
-
-    Observe the DPDK logs at the bottom of the terminal. These logs correspond to the packet processing 
-    function executed in the .spec file generated when the P4 code is compiled.
-
-.. image:: images/Generic_workflow_design.png
-
-**Figure 33.** Logs corresponding to the ethernet packet sent.
-
-The “extract header” log followed by the header ID “0” in the grey box, corresponds to the parsed ethernet 
-header with the size of 14 bytes (112 bits) as declared in the headers.p4 file. The header ID is an 
-indicator of the parsed header order. Therefore “header 0” is the first parsed header. Note that the IPv4 
-header (header 1) and the TCP header (header 2) were not extracted and not emitted (invalid) since they 
-were not included in the sent packet.
-
-The “tx 1 pkt to port 1” log indicated that one packet has been sent to port 1 which corresponds to host 2.
-
-**Step 3.** For a more readable output press enter in the terminal a few times (five times).
+..note::
+    Observe the DPDK logs at the bottom of the terminal. 
+    These logs correspond to the packet processing function 
+    executed in the .spec file generated when the P4 code is 
+    compiled. 
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 34.** Providing space in the terminal.
+**Figure 26:**  Logs corresponding to the packet sent.
 
-**Step 4.** Switch back to the terminal tab in which the Python script was executed.
+The log highlighted in the first grey box corresponds to 
+the match found in the match-action table with table ID 0 
+which indicates that an exact match is found. Since there 
+is a match the *forward_exact* action with action ID 1 is
+executed. 
+
+The second grey box shows that two move functions and one 
+arithmetic operation are done to flip the source and 
+destination MAC addresses and decrease the TTL as specified
+in the *forward_exact* action in the *control.p4* script.
+
+The “tx 1 pkt to port 2” log in the third grey box indicates 
+that the forwarding action is properly executed by sending one 
+packet to port 2 which corresponds to host 3.
+
+**Step 3.** For a more readable output press enter in the 
+terminal a few times (five times).
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 35.** Switching back to the Python terminal.
+**Figure 27:** Providing space in the terminal.
 
-**Step 5.** We will send a packet with an Ethernet and IPv4 header from h1 to h2 by running the provided 
-Python script sender.py.::
-
-    ip netns exec h1 python3 sender.py -r h2 -ph eth/ipv4
+**Step 4.**Switch back to the terminal tab in which the Python 
+script was executed.
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 36.** Sending a packet with an Ethernet and IPv4 header from h1 to h2.
+**Figure 28:** Switching back to the Python terminal.
 
-**Step 6.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
+
+Testing default action when no match is found
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Step 1.** Now, we will send a packet with an ethernet, IPv4, 
+and TCP header from h1 to h3 over the destination IP address 
+192.168.30.3 by running the provided Python script *sender.py*::
+
+    ip netns exec h1 python3 sender.py -s h1 -d 192.168.30.3
+ 
+.. image:: images/Generic_workflow_design.png
+
+**Figure 29:**  Sending a packet from h1 to h3.
+
+**Step 2.** Switch back to the terminal tab in which the DPDK 
+pipeline is running to observe the result.
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 37.** Switch back to the DPDK pipeline terminal.
+**Figure 30:** Switch back to the DPDK pipeline terminal.
 
 Observe the DPDK logs at the bottom of the terminal.
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 38.** Logs corresponding to the IPv4 packet sent.
+**Figure 31:** Logs corresponding to the packet sent.
 
-The “extract header” log appears twice in the grey box, corresponding to the parsed ethernet header 
-(header 0) with a size of 14 bytes (112 bits) and the parsed IPv4 header (header 1) with a size of 
-20 bytes (160 bits) as declared in the *headers.p4* file. Note that the TCP header (header 2) was not 
-extracted and not emitted (invalid) since it was not included in the sent packet.
+The log highlighted in the first grey box corresponds to the 
+table lookup. An exact match was not found in table 0 which 
+corresponds to the *forwarding_exact* table. In this case, a 
+table lookup will be performed in the second table named 
+*forwarding_lmp* with a table ID of 1. A match was not found 
+in the second table. Therefore, the default action (action 3) 
+is executed, and the packet is dropped. The log in the second 
+grey box indicates that one packet has been dropped.
 
-The “tx 1 pkt to port 1” log indicated that one packet has been sent to port 1 which corresponds 
-to host 2.
-
-**Step 7.** For a more readable output press enter in the terminal a few times (five times).
-
-.. image:: images/Generic_workflow_design.png
-
-**Figure 39.** Providing space in the terminal.
-
-**Step 8.** Switch back to the terminal tab in the Python script was executed.
+**Step 3.**For a more readable output press enter in the terminal 
+a few times (five times).
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 40.** Switching back to the Python terminal.
+**Figure 32:** Providing space in the terminal.
 
-**Step 9.** We will send a packet with an ethernet, IPv4, and TCP header from h1 to h2 by running 
-the provided Python script *sender.py*.
-
-    ip netns exec h1 python3 sender.py -r h2 -ph eth/ipv4/tcp
+**Step 4.** Switch back to the terminal tab in which the Python 
+script was executed.
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 41.** Sending a packet with an ethernet, IPv4, and TCP header from h1 to h2.
+**Figure 33:** Switching back to the Python terminal.
 
-**Step 10.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+Testing LPM
+~~~~~~~~~~~
 
-**Figure 42.** Switch back to the DPDK pipeline terminal.
+**Step 1.** To test the LPM table lookup, we will send a packet 
+with an ethernet, IPv4, and TCP header from h1 to h2 over the 
+destination IP address 192.168.20.3 by running the provided 
+Python script *sender.py*::
 
-Observe the DPDK logs at the bottom of the terminal:
-
-.. image:: images/Generic_workflow_design.png
-
-**Figure 43.** Logs corresponding to TCP the packet sent.
-
-The “extract header” log appears three times in the grey box, corresponds to the parsed ethernet 
-header (header 0) with size of 14 bytes (112 bits), the parsed IPv4 header (header 1) with size 
-20 bytes (160 bits) and the parsed TCP header (header 2) with size 20 bytes (160 bits) as declared in 
-the headers.p4 file. The “tx 1 pkt to port 1” log indicated that one packet has been sent to port 1 
-which corresponds to host 2.
-
-**Step 11.** Stop the DPDK pipeline by pressing ctrl+c.
+    ip netns exec h1 python3 sender.py -s h1 -d 192.168.20.3
 
 .. image:: images/Generic_workflow_design.png
 
-**Figure 44.** Stopping the DPDK pipeline.
+**Figure 34:**  Sending a packet from h1 to h2.
 
-This concludes Lab 3. You can now end your reservation.
+None of the rules uploaded include matching on the IP address 
+192.168.20.3. Therefore, the LPM rules are applied to match the 
+IP address to the longest prefix which is in this case 192.168.20.0.
+
+**Step 2.** Switch back to the terminal tab in which the DPDK 
+pipeline is running to observe the result.
+
+.. image:: images/Generic_workflow_design.png 
+
+**Figure 35:** Switch back to the DPDK pipeline terminal.
+
+Observe the DPDK logs at the bottom of the terminal.
+
+.. image:: images/Generic_workflow_design.png 
+
+**Figure 36:** Logs corresponding to the packet sent.
+
+The log highlighted in the first grey box corresponds to the 
+table lookup. An exact match was not found in table 0 which 
+corresponds to the *forwarding_exact* table. In this case, a 
+table lookup will be performed in the second table named 
+forwarding_lmp with a table ID of 1. A match was found in the 
+second table. Therefore, the *forward_lpm* (action 2) is 
+executed.
+
+The second grey box shows that two move functions and one 
+arithmetic operation are done to flip the source and destination 
+MAC addresses and decrease the TTL as specified in the *forward_lpm* 
+action in the *control.p4* script.
+
+The “tx 1 pkt to port 1” log in the third grey box indicates 
+that the forwarding action is properly executed by sending one 
+packet to port 1 which corresponds to host 2.
+
+**Step 3. **Stop the DPDK pipeline by pressing ``ctrl+c``. 
+
+.. image:: images/Generic_workflow_design.png 
+    
+**Figure 37:**  Stopping the DPDK pipeline.
+
+This concludes Lab 5. You can now end your reservation.
