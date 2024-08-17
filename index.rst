@@ -14,10 +14,6 @@
       <em>“Cybertraining on P4 Programmable Devices using an Online Scalable Platform with Physical and Virtual Switches and Real Protocol Stacks”</em>
    </p>
 
-
-Library
-=======
-
 .. toctree::
    :maxdepth: 2
    :caption: Labs:

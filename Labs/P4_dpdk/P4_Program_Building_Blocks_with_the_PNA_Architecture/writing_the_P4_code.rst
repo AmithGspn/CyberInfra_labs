@@ -15,7 +15,7 @@ Loading the programming environment
 
 **Step 1.** Launch a Linux terminal by clicking on the Linux terminal icon in the taskbar.	
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/4.png
 
 **Figure 4:** Linux terminal icon.
 
@@ -28,7 +28,7 @@ opens the directory where the P4 program for this lab is located::
 
     code P4DPDK_labs/lab2 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/5.png
 
 **Figure 5:** Loading VS Code in the lab2 directory.
 
@@ -38,7 +38,7 @@ Describing the components of the P4 program
 **Step 1.** Once the previous command is executed, VS Code will start. Click on main.p4 in 
 the file explorer panel on the left-hand side to open the P4 program in the editor.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/6.png
 
 **Figure 6:** The main P4 file and how it includes other user-defined files.
 
@@ -53,7 +53,7 @@ We will navigate through the files in sequence as they appear in the architectur
 
 **Step 2.** Click on the *headers.p4* file to display the content of the file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/7.png
 
 **Figure 7:** The defined headers.
 
@@ -62,7 +62,7 @@ the ethernet header is defined. We can also see how it is inserted in a structur
 
 **Step 3.** Click on the *parser.p4* file to display the content of the parser.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/8.png
 
 **Figure 8:** The parser implementation.
 
@@ -70,7 +70,7 @@ The figure above shows the content of the parser.p4 file. We can see that the pa
 
 **Step 4.** Click on the *precontrol.p4* file to display the content of the parser.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/9.png
 
 **Figure 9:** The pre-control implementation.
 
@@ -79,7 +79,7 @@ already written with the name PreControl. This name will be used when defining t
 
 **Step 5.** Click on the *control.p4* file to display the content of the main control block.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/10.png
 
 **Figure 10:** The main control implementation.
 
@@ -88,7 +88,7 @@ written with the name MainControl. This name will be used when defining the pipe
 
 **Step 6.** Click on the *deparser.p4* file to display the content of the main control block.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/11.png
 
 **Figure 11:** The deparser implementation.
 
@@ -103,7 +103,7 @@ Now it is time to write the pipeline sequence in the main.p4 program.
 
 **Step 1.** Click on the main.p4 file to display the content of the file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/12.png
 
 **Figure 12:** Selecting the main.p4 file.
 
@@ -116,7 +116,7 @@ Now it is time to write the pipeline sequence in the main.p4 program.
     MyDeparser()
     ) main;
     
-.. image:: images/Generic_workflow_design.png
+.. image:: images/13.png
 
 **Figure 13:** Writing the pipeline sequence in the main.p4 program.
 
@@ -130,7 +130,7 @@ Compiling the P4 program
 
 **Step 1.** Open a new terminal in VS Code by clicking on *Terminal* in the menu bar and then *New Terminal* in the drop-down menu.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/14.png
 
 **Figure 14:** Opening a new VS Code terminal.
 
@@ -138,7 +138,7 @@ Compiling the P4 program
 
     p4c-dpdk --arch pna main.p4 -o lab2.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/15.png
 
 **Figure 15:** Compiling the P4 program using the VS Code terminal.
 

@@ -7,7 +7,10 @@ them is established.
 
 Namespaces are a feature that partitions Linux resources. Linux namespaces provide independent instances of 
 networks that enable network isolation and independent operations. Each network namespace has its own networking 
-devices, IP addresses, routing tables, and firewall rules8.
+devices, IP addresses, routing tables, and firewall rules [8]_.
+
+.. [8] DPDK, “Memory in DPDK, Part 1: General Concepts”, [Online]. Available: 
+   https://www.dpdk.org/memory-in-dpdk-part-1-general-concepts/.
 
 Creating namespaces
 +++++++++++++++++++
@@ -17,7 +20,7 @@ Creating namespaces
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_29.png
 
 **Figure 29:** Entering root mode.
 
@@ -25,7 +28,7 @@ Creating namespaces
 
     ip netns add h1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_30.png
 
 **Figure 30:** Creating a namespace h1.
 
@@ -33,7 +36,7 @@ Creating namespaces
 
     ip netns add h2
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_31.png
 
 **Figure 31:** Creating a namespace h2.
 
@@ -46,7 +49,7 @@ In this section, you will attach dtap0 to namespace h1 and dtap1 to namespace h2
 
     ip link set dtap0 netns h1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_32.png
 
 **Figure 32:** Linking namespace h1 to *dtap0*.
 
@@ -54,7 +57,7 @@ In this section, you will attach dtap0 to namespace h1 and dtap1 to namespace h2
 
     ip link set dtap1 netns h2
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_33.png
 
 **Figure 33:** Linking namespace h1 to *dtap1*.
 
@@ -62,7 +65,7 @@ In this section, you will attach dtap0 to namespace h1 and dtap1 to namespace h2
 
     ip netns exec h1 ip link set dev dtap0 up
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_34.png
 
 **Figure 34:** Turning up the interface, *dtap0*.
 
@@ -74,7 +77,7 @@ be executed in namespace ``h1``.
 
     ip netns exec h2 ip link set dev dtap1 up
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_35.png
 
 **Figure 35:** Turning up the interface, *dtap1*.
 
@@ -88,7 +91,7 @@ by typing the following command.::
 
     ip netns exec h1 ifconfig dtap0 192.168.10.1/24
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_36.png
 
 **Figure 36:** Configuring the interface, *dtap0*.
 
@@ -97,7 +100,7 @@ typing the following command.::
 
     ip netns exec h2 ifconfig dtap1 192.168.10.2/24
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_37.png
 
 **Figure 37:** Configuring the interface, *dtap1*.
 
@@ -109,7 +112,7 @@ h2 *192.168.10.2* with its MAC address *00:00:00:00:00:02*.::
 
     ip netns exec h1 arp -s 192.168.10.2 00:00:00:00:00:02  
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_38.png
 
 **Figure 38:** Adding a static ARP entry in host h1.
 
@@ -118,6 +121,6 @@ h1 *192.168.10.1* with its MAC address *00:00:00:00:00:01*.::
 
     ip netns exec h2 arp -s 192.168.10.1 00:00:00:00:00:01
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_39.png
 
 **Figure 39:** Adding a static ARP entry in host h2.

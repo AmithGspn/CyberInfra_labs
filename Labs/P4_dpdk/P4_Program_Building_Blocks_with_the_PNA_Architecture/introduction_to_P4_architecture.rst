@@ -7,7 +7,11 @@ or P4 target, the architecture and a P4 compiler. P4 programs are specifically w
 for a particular P4 architecture and can be applied to any targets compatible with the same 
 architecture. The compilation of these P4 programs yields two key elements: a data plane 
 configuration implementing the forwarding logic based on the input program and an API 
-facilitating the control plane's management of the data plane object states1.
+facilitating the control plane's management of the data plane object states [1]_.
+
+.. [1] S. Ibanez, *“The p4-> netfpga workflow for line-rate packet processing”*, 
+   Proceedings of the 2019 ACM/SIGDA International Symposium on Field-Programmable 
+   Gate Arrays, 2019.
 
 The PNA architecture
 ~~~~~~~~~~~~~~~~~~~~
@@ -21,9 +25,14 @@ as shown in Figure 1. The host-to-net and net-to-host externs allow executing fu
 domain-specific accelerators such as encrypting or decrypting IPsec payload. The message processing 
 is responsible for converting between large messages in host memory and network size packets on the 
 network and for dealing with one or more host operating systems, drivers, and/or message descriptor formats 
-in host memory2,3.
+in host memory [2]_ [3]_.
 
-.. image:: images/Generic_workflow_design.png
+.. [2] The P4 Language Consortium, *“P4 Portable NIC Architecture (PNA)”*, Version 0.5, 2021. 
+   [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
+
+.. [3] P4lang, *“pna”*, [Online]. Available: https://github.com/p4lang/pna/tree/main?tab=readme-ov-file
+
+.. image:: images/1.png
 
 **Figure 1:** Portable NIC architecture (PNA)2.
 
@@ -36,7 +45,12 @@ discussed in the next subsection. The programmable parser permits the programmer
 The parser de-encapsulates the headers, converting the original packet into a parsed representation 
 of the packet. The programmer declares the headers that must be recognized and their order in the 
 packet. The parser can be represented as a state machine without cycles (direct acyclic graph), 
-with one initial state (start) and two final states (accept or reject) 2,3.
+with one initial state (start) and two final states (accept or reject) [2]_ [3]_.
+
+.. [2] The P4 Language Consortium, *“P4 Portable NIC Architecture (PNA)”*, Version 0.5, 2021. 
+   [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
+
+.. [3] P4lang, *“pna”*, [Online]. Available: https://github.com/p4lang/pna/tree/main?tab=readme-ov-file
 
 Programmable controller 
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -46,14 +60,24 @@ processing by the net-to-host inline extern block. An example would be a packet 
 and needs processing before being handled by the main controller. The Main Control is where the code 
 would be written for the packet processing logic. It aims to transform headers, update stateful elements 
 like counters, meters, and registers, and optionally associate additional user-defined metadata with the 
-packet2,3.
+packet [2]_ [3]_.
+
+.. [2] The P4 Language Consortium, *“P4 Portable NIC Architecture (PNA)”*, Version 0.5, 2021. 
+   [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
+
+.. [3] P4lang, *“pna”*, [Online]. Available: https://github.com/p4lang/pna/tree/main?tab=readme-ov-file
 
 Programmable deparser
 ~~~~~~~~~~~~~~~~~~~~~
 
 The deparser assembles back the packet and serializes it for transmission. The programmer specifies the headers 
 to be emitted by the deparser. When assembling the packet, the deparser emits the specified headers followed by 
-the original payload of the packet2,3. 
+the original payload of the packet [2]_ [3]_.
+
+.. [2] The P4 Language Consortium, *“P4 Portable NIC Architecture (PNA)”*, Version 0.5, 2021. 
+   [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
+
+.. [3] P4lang, *“pna”*, [Online]. Available: https://github.com/p4lang/pna/tree/main?tab=readme-ov-file
 
 P4 program mapping to the PNA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -69,7 +93,7 @@ and its associated P4 files. These files are as follows:
 * ``main.p4``: this file contains the starting point of the program and invokes the other files. 
     This file must be compiled.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/2.png
 
 **Figure 2:** Mapping of P4 files to the PNA’s components.
 

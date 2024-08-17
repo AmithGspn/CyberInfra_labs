@@ -13,7 +13,7 @@ Loading the programming environment
 
 **Step 1.** Launch a Linux terminal by clicking on the Linux terminal icon in the taskbar.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_6.png
 
 **Figure 6:** Linux terminal icon.
 
@@ -26,14 +26,14 @@ directory where the required files for this lab are located::
 
     code P4DPDK_labs/lab1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_7.png
 
 **Figure 7:** Launching the editor and opening the lab1 directory.
 
 **Step 3.** Once the previous command is executed, VS Code will start. Click on lab1.p4 in the file 
 explorer panel on the left-hand side to open the P4 program in the editor.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_8.png
 
 **Figure 8:** Opening the programming environment in VS Code.
 
@@ -47,7 +47,7 @@ Compiling the P4 program
 **Step 1.** Open a new terminal in VS Code by clicking on Terminal in the menu bar and then New Terminal 
 in the drop-down menu.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_9.png
 
 **Figure 9:** Opening a new VS Code terminal.
 
@@ -56,7 +56,7 @@ compiler. To compile the P4 program, issue the following command in the terminal
 
     p4c-dpdk --arch pna lab1.p4 -o lab1.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_10.png
 
 **Figure 10:** Compiling the P4 program in VS Code terminal.
 
@@ -77,7 +77,7 @@ which the pipeline is created and built.
 **Step 1.** Click on *lab1.cli* in the file explorer panel on the left-hand side to open the CLI script in 
 the editor.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_11.png
 
 **Figure 11:** Inspecting the CLI script.
 
@@ -88,7 +88,7 @@ the lab1.cli file::
 
     pipeline libbuild /tmp/lab1.c /tmp/lab1.so
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_12.png
 
 **Figure 12:** Generating the pipeline code and building the shared object.
 
@@ -109,7 +109,7 @@ the *lab1.cli* file::
 
     ethdev net_tap1 rxq 1 128 MEMPOOL0 txq 1 512 promiscuous on
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_13.png
 
 **Figure 13:** listing DPDK devices.
 
@@ -145,7 +145,7 @@ Two ethernet devices which are the interfaces linked to the pipeline, are also d
     
     /home/admin/P4DPDK_labs/lab1/ethdev.io numa 0
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_14.png
 
 **Figure 14:** listing P4-DPDK pipelines.
 
@@ -157,7 +157,7 @@ subsection) ``io`` /home/admin/P4DPDK_labs/lab1/ethdev.io and the numa node ID `
 
     pipeline PIPELINE0 enable thread 1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_15.png
 
 **Figure 15:** Mapping the pipeline to a thread.
 
@@ -167,7 +167,7 @@ In the figure above the *enable thread* function (line 14) is used to map the pi
 
 **Step 1.** Click on *ethdev.io* in the file explorer panel on the left-hand side to open the I/O script in the editor.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_16.png
 
 **Figure 16:** Inspecting the I/O script.
 
@@ -177,7 +177,7 @@ In the figure above the *enable thread* function (line 14) is used to map the pi
 
     port in 1 ethdev net_tap1 rxq 0 bsz 1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_17.png
 
 **Figure 17:** Defining pipeline input ports.
 
@@ -202,7 +202,7 @@ packets in bursts but in this experiment, the burst size is set to 1.
 
     port out 1 ethdev net_tap1 txq 0 bsz 1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_18.png
 
 **Figure 18:** Defining pipeline output ports.
 
@@ -228,7 +228,7 @@ Now that all the required scripts are prepared, we can run the pipeline.
 
 **Step 1.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_19.png
 
 **Figure 19:** Maximizing Linux terminal window.
 
@@ -237,7 +237,7 @@ prompted for a password, type *password* and hit enter. Note that the password w
     
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_20.png
 
 **Figure 20:** Entering root mode.
 
@@ -245,7 +245,7 @@ prompted for a password, type *password* and hit enter. Note that the password w
 
     echo 1024 > /sys/kernel/mm/hugepages/hugepages-2048kB/nr_hugepages
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_21.png
 
 **Figure 21:** Reserving hugepages.
 
@@ -260,7 +260,7 @@ file specified in the following path: */sys/kernel/mm/hugepages/hugepages-2048kB
 
     cd dpdk
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_22.png
 
 **Figure 22:** Navigating to the DPDK installation directory.
 
@@ -270,7 +270,7 @@ file specified in the following path: */sys/kernel/mm/hugepages/hugepages-2048kB
     --vdev=net_tap0,mac="00:00:00:00:00:01" --vdev=net_tap1,mac="00:00:00:00:00:02" 
     -- -s /home/admin/P4DPDK_labs/lab1/lab1.cli
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_23.png
 
 **Figure 23:** Running P4-DPDK pipeline.
 
@@ -295,7 +295,7 @@ Inspecting interfaces
 
 **Step 1.** Click on the new tab button at the top left of the terminal while running the pipeline.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_24.png
 
 **Figure 24:** Opening a new terminal in a new tab.
 
@@ -303,7 +303,7 @@ Inspecting interfaces
 
     ifconfig
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_25.png
 
 **Figure 25:** Displaying interface configuration.
 
@@ -315,7 +315,7 @@ the interfaces as understood by the operating system.
 
     telnet 0.0.0.0 8086
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_26.png
 
 **Figure 26:** Entering the pipeline CLI.
 
@@ -325,7 +325,7 @@ The ``telnet`` command is followed by the broadcast IP address (0.0.0.0) and the
 
     ethdev show
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_27.png
 
 **Figure 27:** Inspecting interfaces.
 
@@ -340,6 +340,6 @@ packet count ``TX packets`` with the corresponding total byte-count ``bytes`` an
 
 **Step 5.** Close the pipeline CLI and the telnet session by pressing ``ctrl+]`` and then type the ``quit`` command.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/fig_28.png
 
 **Figure 28:** Closing pipeline and telnet session.

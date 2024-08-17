@@ -12,7 +12,7 @@ Now that all the required scripts are prepared, we can run the pipeline.
 
 **Step 1.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/16.png
 
 **Figure 16:** Maximizing Linux terminal window.
 
@@ -20,7 +20,7 @@ Now that all the required scripts are prepared, we can run the pipeline.
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/17.png
 
 **Figure 17:** Entering root mode.
 
@@ -28,7 +28,7 @@ Now that all the required scripts are prepared, we can run the pipeline.
 
     cd P4DPDK_labs/lab2  
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/18.png
 
 **Figure 18:** Navigating to the lab2 directory.
 
@@ -36,7 +36,7 @@ Now that all the required scripts are prepared, we can run the pipeline.
 
     ./run_pipeline.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/19.png
 
 **Figure 19:** Running P4-DPDK pipeline.
 
@@ -47,7 +47,7 @@ Building the lab topology
 
 **Step 1.** Click on the new tab button at the top left of the terminal while running the pipeline.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/20.png
 
 **Figure 20:** Opening a new terminal in a new tab.
 
@@ -55,7 +55,7 @@ Building the lab topology
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/21.png
 
 **Figure 21:** Entering root mode.
 
@@ -63,7 +63,7 @@ Building the lab topology
 
     cd P4DPDK_labs/lab2  
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/22.png
 
 **Figure 22:** Navigating to the lab2 directory.
 
@@ -71,7 +71,7 @@ Building the lab topology
 
     ./set_topology.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/23.png
 
 **Figure 23:** Setting the lab topology.
 
