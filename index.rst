@@ -18,7 +18,6 @@
    :maxdepth: 2
    :caption: Labs:
 
-   Labs/Introduction_to_P4_and_BMv2/Introduction_to_p4_and_BMv2
    Labs/P4_dpdk/Introduction_to_P4_DPDK/Introduction_to_P4_DPDK
    Labs/P4_dpdk/P4_Program_Building_Blocks_with_the_PNA_Architecture/P4_Program_Building_Blocks_with_the_PNA_Architecture
    Labs/P4_dpdk/PNA_Parser_Implementation/PNA_Parser_Implementation
