@@ -16,7 +16,7 @@ occurs, and to drop the packet otherwise. Figure 1 shows the basic structure of 
 .. [2] P4lang, “pna”, [Online]. 
     Available: https://github.com/p4lang/pna/tree/main?tab=readme-ov-file
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/1.png
 
 **Figure 1:** Control blocks.
 
@@ -90,7 +90,7 @@ Table 1 contains the credentials of the virtual machine used for this lab.
    this program, the ``forwarding`` table is enabled when the incoming packet has a valid IPv4 header. Otherwise, the 
    packet is dropped.
 
-   .. image:: images/Generic_workflow_design.png
+   .. image:: images/2.png
 
 **Figure 2:** Main control block portion of a P4 program. The code implements a match-action table with exact match lookup.
 

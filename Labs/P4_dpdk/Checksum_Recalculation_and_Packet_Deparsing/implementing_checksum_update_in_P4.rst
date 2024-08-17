@@ -8,7 +8,7 @@ Programming the checksum update in the P4 code
 
 Click on the VScode tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/33.png
 
 **Figure 33.** Maximizing VScode window.
 
@@ -17,7 +17,7 @@ before the apply block in the *parser.p4* code.
 
     InternetChecksum() checksum;
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/34.png
 
 **Figure 34.** Creating the checksum object.
 
@@ -30,7 +30,7 @@ following code at the beginning of the apply block.::
     bit<16> word1 = hdr.ipv4.version ++ hdr.ipv4.ihl ++ hdr.ipv4.diffserv;
     bit<32> word4 = hdr.ipv4.flags ++ hdr.ipv4.fragOffset ++ hdr.ipv4.ttl ++ hdr.ipv4.protocol;
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/35.png
 
 Figure 35. Concatenating the header fields.
 
@@ -48,7 +48,7 @@ the code below.::
         hdr.ipv4.dstAddr
     });
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/36.png
 
 **Figure 36.** Adding the data needed for the checksum calculation.
 
@@ -56,7 +56,7 @@ the code below.::
 
     hdr.ipv4.hdrChecksum = checksum.get();
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/37.png
 
 **Figure 37.** Updating the checksum.
 
@@ -71,7 +71,7 @@ VS Code.::
 
     p4c-dpdk --arch pna main.p4 -o lab7.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/38.png
 
 **Figure 38.** Compiling the P4 program using the VS Code terminal.
 
@@ -84,7 +84,7 @@ Building the P4-DPDK pipeline and the lab topology
 
 **Step 1.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/39.png
 
 **Figure 39.** Maximizing Linux terminal window.
 
@@ -92,13 +92,13 @@ Building the P4-DPDK pipeline and the lab topology
 
     ./run_pipeline.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/40.png
 
 **Figure 40.** Running P4-DPDK pipeline.
 
 **Step 3.** Switch back to the separate terminal tab.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/41.png
 
 **Figure 41.** Switching to a separate terminal.
 
@@ -106,7 +106,7 @@ Building the P4-DPDK pipeline and the lab topology
 
     ./set_topology.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/42.png
 
 **Figure 42.** Setting the lab topology.
 
@@ -121,7 +121,7 @@ a pcap file.::
 
     ip netns exec h3 tcpdump -i dtap2 -w checksum.pcap
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/43.png
 
 **Figure 43.** Start packet capturing on host 3.
 
@@ -132,7 +132,7 @@ packets are going to be written to a packet capture (.pcap) file given the name 
 
 **Step 2.** Switch back to the separate terminal tab.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/44.png
 
 **Figure 44.** Switching to a separate terminal.
 
@@ -141,13 +141,13 @@ the provided Python script sender.py.::
 
     ip netns exec h1 python3 sender.py -s h1 -d 192.168.30.1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/45.png
 
 **Figure 45.** Sending a packet from h1 to h3.
 
 **Step 4.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/46.png
 
 **Figure 46.** Switch back to the DPDK pipeline terminal.
 
@@ -156,7 +156,7 @@ the provided Python script sender.py.::
     Observe the DPDK logs at the bottom of the terminal. These logs correspond to the packet 
     processing function as defined in the .spec file generated when the P4 code is compiled.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/47.png
 
 **Figure 47.** Logs corresponding to the packet sent.
 
@@ -166,13 +166,13 @@ first grey box and updating the value in the checksum header field in the second
 
 **Step 5.** Switch back to the terminal tab in which the tcpdump sniffer is running.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/48.png
 
 **Figure 48.** Switching back to the tcpdump terminal.
 
 **Step 6.** Terminate the tcpdump process by pressing ``Ctrl + c`` in the terminal.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/49.png
 
 **Figure 49.** Terminating the packet capturing process.
 
@@ -184,13 +184,13 @@ run the following command.
 
     wireshark -r checksum.pcap
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/50.png
 
 **Figure 50.** Opening the pcap file in Wireshark.
 
 **Step 8.** Expand the IPv4 header to view the header fields in the captured packet received at host 3 by clicking on the arrow on the side.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/51.png
 
 **Figure 51.** Opening the pcap file in Wireshark.
 
@@ -199,20 +199,20 @@ the checksum in the IPv4 header after changing the header field value (i.e., TTL
 
 **Step 9.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/52.png
 
 **Figure 52.** Maximizing Linux terminal window.
 
 **Step 10.** Press ctrl+c to terminate the process.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/53.png
 
 **Figure 53.** Stopping the running process.
 
 **Step 11.** Switch back to the terminal tab running the DPDK pipeline and press ctrl+c to terminate 
 the process.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/54.png
 
 **Figure 54.** Stopping the running pipeline.
 

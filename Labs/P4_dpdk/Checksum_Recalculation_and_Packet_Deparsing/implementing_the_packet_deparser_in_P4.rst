@@ -13,7 +13,7 @@ Loading the programming environment
 
 **Step 1.** Launch a Linux terminal by clicking on the Linux terminal icon in the taskbar.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/3.png
 
 **Figure 3.** Linux terminal icon.
 
@@ -26,14 +26,14 @@ the directory where the P4 program for this lab is located.::
 
     code P4DPDK_labs/lab7
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/4.png
 
 **Figure 4.** Loading VS Code in the lab7 directory.
 
 **Step 1.** Click on the *deparser.p4* file to display the contents of the file. Use the file explorer 
 on the left-hand side of the screen to locate the file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/5.png
 
 **Figure 5.** Inspecting the *deparser.p4* file.
 
@@ -44,7 +44,7 @@ of the apply block of the deparser is empty for us to fill it.
 
     packet.emit(hdr.ethernet)
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/6.png
 
 **Figure 6.** Emitting the ethernet header.
 
@@ -52,7 +52,7 @@ of the apply block of the deparser is empty for us to fill it.
 
     packet.emit(hdr.ipv4)
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/7.png
 
 **Figure 7.** Emitting the IPv4 header.
 
@@ -60,7 +60,7 @@ of the apply block of the deparser is empty for us to fill it.
 
     packet.emit(hdr.tcp)
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/8.png
 
 **Figure 8.** Emitting the TCP header.
 
@@ -72,14 +72,18 @@ Compiling the P4 program
 **Step 1.** Open a new terminal in VS Code by clicking on Terminal in the menu bar and then 
 *New Terminal* in the drop-down menu.
 
+.. image:: images/9.png
+
+**Figure 9.** Opening a new VS Code terminal.
+
 **Step 2.** To compile the P4 program, issue the following command in the terminal panel 
 inside VS Code.::
 
     p4c-dpdk --arch pna main.p4 -o lab7.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/10.png
 
-Figure 10. Compiling the P4 program using the VS Code terminal.
+**Figure 10.** Compiling the P4 program using the VS Code terminal.
 
 The command above invokes the *p4c-dpdk* compiler to compile the *lab7.p4* program and generates 
 the *lab7.spec* file (highlighted in the grey box) which is a specification file needed to run 
@@ -90,7 +94,7 @@ Building the P4-DPDK pipeline and the lab topology
 
 **Step 1.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/11.png
 
 **Figure 11.** Maximizing Linux terminal window.
 
@@ -100,7 +104,7 @@ it.::
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/12.png
 
 **Figure 12.** Entering root mode.
 
@@ -108,7 +112,7 @@ it.::
 
     cd P4DPDK_labs/lab7
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/13.png
 
 **Figure 13.** Navigating to the lab7 directory.
 
@@ -116,7 +120,7 @@ it.::
 
     ./run_pipeline.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/14.png
 
 **Figure 14.** Running P4-DPDK pipeline.
 
@@ -125,7 +129,7 @@ pipeline.
 
 **Step 5.** Click on the new tab button at the top left of the terminal while running the pipeline.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/15.png
 
 **Figure 15.** Opening a new terminal in a new tab.
 
@@ -135,7 +139,7 @@ it.::
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/16.png
 
 **Figure 16.** Entering root mode.
 
@@ -143,7 +147,7 @@ it.::
 
     cd P4DPDK_labs/lab7
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/17.png
 
 **Figure 17.** Navigating to the lab7 directory.
 
@@ -151,7 +155,7 @@ it.::
 
     ./set_topology.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/18.png
 
 **Figure 18.** Setting the lab topology.
 
@@ -167,7 +171,7 @@ packets to a pcap file.::
 
     ip netns exec h3 tcpdump -i dtap2 -w no_checksum.pcap
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/19.png
 
 **Figure 19.** Start packet capturing on host 3.
 
@@ -179,7 +183,7 @@ name no_checksum.pcap.
 
 **Step 2.** Click on the new tab button at the top left to open a new terminal tab.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/20.png
 
 **Figure 20.** Opening a new terminal in a new tab.
 
@@ -188,7 +192,7 @@ password, type password and hit enter. Note that the password will not be visibl
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/21.png
 
 **Figure 21.** Entering root mode.
 
@@ -196,7 +200,7 @@ password, type password and hit enter. Note that the password will not be visibl
 
     cd P4DPDK_labs/lab7
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/22.png
 
 **Figure 22.** Navigating to the lab7 directory.
 
@@ -205,7 +209,7 @@ password, type password and hit enter. Note that the password will not be visibl
 
     ip netns exec h1 python3 sender.py -s h1 -d 192.168.30.1
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/23.png
 
 **Figure 23.** Sending a packet from h1 to h3.
 
@@ -220,7 +224,7 @@ Inspecting DPDK logs and the captured packet
 **Step 1.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the 
 result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/24.png
 
 **Figure 24.** Switch back to the DPDK pipeline terminal.
 
@@ -229,7 +233,7 @@ result.
     Observe the DPDK logs at the bottom of the terminal. These logs correspond to the packet processing 
     function executed in the .spec file generated when the P4 code is compiled.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/25.png
 
 **Figure 25.** Logs corresponding to the packet sent.
 
@@ -242,13 +246,13 @@ that one packet has been sent to port 2 which corresponds to host 3.
 
 **Step 2.** Switch back to the terminal tab in which the tcpdump sniffer is running.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/26.png
 
 **Figure 26.** Switching back to the tcpdump terminal.
 
 **Step 3.** Terminate the tcpdump process by pressing Ctrl + c in the terminal.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/27.png
 
 **Figure 27.** Terminating the packet capturing process.
 
@@ -260,14 +264,14 @@ run the following command.::
 
     wireshark -r no_checksum.pcap
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/28.png
 
 **Figure 28.** Opening the pcap file in Wireshark.
 
 **Step 5.** Expand the IPv4 header to view the header fields in the captured packet received at host 
 3 by clicking on the arrow on the side.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/29.png
 
 **Figure 29.** Opening the pcap file in Wireshark.
 
@@ -276,18 +280,18 @@ the header field value (i.e., TTL), but did not update the checksum in the packe
 
 **Step 6.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/30.png
 
 **Figure 30.** Maximizing Linux terminal window.
 
 **Step 7.** Press ctrl+c to terminate the process.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/31.png
 
 **Figure 31.** Stopping the running process.
 
 **Step 8.** Switch back to the terminal tab running the DPDK pipeline and press ctrl+c to terminate the process.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/32.png
 
 **Figure 32.** Stopping the running pipeline.

@@ -58,7 +58,7 @@ statement (see lines 24-28) which contains the control logic. In this program, t
 .. [4] “p4c core.p4”. 
     [Online]. Available: https://github.com/p4lang/p4c/blob/main/p4include/core.p4.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/1.png
 
 **Figure 1:** Main control block portion of a P4 program. The code implements a match-action 
               table with LPM lookup.

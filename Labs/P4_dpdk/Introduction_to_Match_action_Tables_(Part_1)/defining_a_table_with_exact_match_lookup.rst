@@ -15,7 +15,7 @@ Loading the programming environment
 
 **Step 1.** Launch a Linux terminal by clicking on the Linux terminal icon in the taskbar.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/4.png
 
 **Figure 4:** Linux terminal icon
 

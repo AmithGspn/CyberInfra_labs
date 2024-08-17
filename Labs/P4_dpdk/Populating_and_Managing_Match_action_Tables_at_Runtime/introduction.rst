@@ -46,6 +46,6 @@ CLI commands. The CLI can also be used to update the pipeline tables or poll the
 .. [5] P. Bosshart, D. Daly, G. Gibb, M. Izzard, N. McKeown, J. Rexford, C. Schlesinger, D. Talayco, A. Vahdat, G. Varghese, ‘‘P4: Programming 
    protocol-independent packet processors,’’ ACM SIGCOMM Computer Communications. 2014.
 
-.. image:: images/Workflow_used_in_this_lab.png
+.. image:: images/1.png
 
 **Figure 1:** Runtime management of a P4 target (DPDK).

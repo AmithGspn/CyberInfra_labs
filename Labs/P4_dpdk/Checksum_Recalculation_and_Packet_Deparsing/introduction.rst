@@ -31,7 +31,7 @@ Figure 1 shows an example of computing the checksum and implementing a deparser 
 The deparser is defined as a control block and is executed after finishing the packet processing 
 by the other control blocks.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/1.png
 
 **Figure 1.** Checksum update and deparser implementation.
 

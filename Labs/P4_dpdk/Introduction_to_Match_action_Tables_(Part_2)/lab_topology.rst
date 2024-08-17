@@ -6,7 +6,7 @@ to the running P4-DPDK pipeline, enabling connectivity between three
 namespaces. The network environments of hosts h1, h2, and h3 are isolated 
 from each other and the root namespace.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/2.png
 
 **Figure 2:** Lab topology.
 
