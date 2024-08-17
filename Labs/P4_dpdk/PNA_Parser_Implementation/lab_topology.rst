@@ -5,7 +5,7 @@ Consider Figure 6. Two network namespaces, h1 and h2, are linked to the running 
 enablingconnectivity between two namespaces. The network environments of hosts h1 and h2 are isolated 
 from each other and the root namespace. 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/6.png
 
 **Figure 6:** Lab topology.
 

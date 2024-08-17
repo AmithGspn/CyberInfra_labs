@@ -14,7 +14,7 @@ Loading the programming environment
 
 **Step 1.** Launch a Linux terminal by clicking on the Linux terminal icon in the taskbar.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/7.png
 
 **Figure 7.** Linux terminal icon.
 
@@ -27,7 +27,7 @@ the directory where the P4 program for this lab is located.::
 
     code P4DPDK_labs/lab3
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/8.png
 
 **Figure 8.** Loading VS Code in the lab3 directory.
 
@@ -37,7 +37,7 @@ Defining headers in the *headers.p4* file
 **Step 1.** Click on the headers.p4 file to display the contents of the file. Use the file explorer on 
 the left-hand side of the screen to locate the file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/9.png
 
 **Figure 9.** Inspecting the headers.p4 file.
 
@@ -50,7 +50,7 @@ We can see that the *headers.p4* is empty and we have to fill it.
     const bit<16> TYPE_IPV4 = 0x0800;
     const bit<8> TYPE_TCP = 6;
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/10.png
 
 **Figure 10.** Data types and constant definitions.
 
@@ -67,7 +67,7 @@ value of ``6``. We will use these values in the parser implementation.
     EthernetAddress srcAddr;
     bit<16> etherType; }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/11.png
 
 **Figure 11.** Adding the Ethernet header definition.
 
@@ -91,7 +91,7 @@ fields to those defined in the standard Ethernet header (see Figure 1).
     IP4Address srcAddr;
     IP4Address dstAddr; }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/12.png
 
 **Figure 12.** Adding the IPv4 header definition.
 
@@ -114,7 +114,7 @@ fields to those defined in the standard IPv4 header (see Figure 2).
     bit<16> checksum;
     bit<16> urgentPtr; }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/13.png
 
 **Figure 13.** Adding the TCP header definition.
 
@@ -130,7 +130,7 @@ it as empty with no fields. Add the following to the *headers.p4* file.::
     /* empty */
     }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/14.png
 
 **Figure 14.** Adding the metadata structures.
 
@@ -142,7 +142,7 @@ to the *headers.p4* file.
     ipv4_t ipv4;
     tcp_t tcp;}
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/15.png
 
 **Figure 15.** Appending the headers’ data structure to the *headers.p4* file.
 

@@ -12,7 +12,7 @@ Now that all the required scripts are prepared, we can run the pipeline.
 
 **Step 1.** Click on the terminal tab in the start bar to maximize the window.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/23.png
 
 **Figure 23.** Maximizing Linux terminal window.
 
@@ -21,7 +21,7 @@ type password and hit enter. Note that the password will not be visible as you t
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/24.png
 
 **Figure 24.** Entering root mode.
 
@@ -29,7 +29,7 @@ type password and hit enter. Note that the password will not be visible as you t
 
     cd P4DPDK_labs/lab3
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/25.png
 
 **Figure 25.** Navigating to the lab3 directory.
 
@@ -37,7 +37,7 @@ type password and hit enter. Note that the password will not be visible as you t
 
     ./run_pipeline.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/26.png
 
 **Figure 26.** Running P4-DPDK pipeline.
 
@@ -48,7 +48,7 @@ Building the lab topology
 
 **Step 1.** Click on the new tab button at the top left of the terminal while running the pipeline.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/37.png
 
 **Figure 27.** Opening a new terminal in a new tab.
 
@@ -57,7 +57,7 @@ and hit enter. Note that the password will not be visible as you type it.::
 
     sudo su
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/38.png
 
 **Figure 28.** Entering root mode.
 
@@ -65,7 +65,7 @@ and hit enter. Note that the password will not be visible as you type it.::
 
     cd P4DPDK_labs/lab3
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/39.png
 
 **Figure 29.** Navigating to the lab3 directory.
 
@@ -73,7 +73,7 @@ and hit enter. Note that the password will not be visible as you type it.::
 
     ./set_topology.sh
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/30.png
 
 **Figure 30.** Setting the lab topology.
 

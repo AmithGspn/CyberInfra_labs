@@ -21,15 +21,15 @@ and the acceleration capabilities of DPDK come together.
 .. [1] The P4 Language Consortium, “P4 Portable NIC Architecture (PNA)”, Version 0.5, 2021. 
    [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/1.png
 
 **Figure 1:** Ethernet header.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/2.png
 
 **Figure 2:** IPv4 header.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/3.png
 
 **Figure 3:** TCP header.
 
@@ -40,7 +40,7 @@ corresponds to Ethernet (lines 11-14). The Ethernet header fields are shown in F
 The programmer also defined an IPv4 header (lines 16-29) and a TCP header (lines 31-42). The IPv4 
 header format is shown in Figure 2 and the TCP header is shown in Figure 3.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/4.png
 
 **Figure 4:** Program headers and definitions.
 
@@ -78,11 +78,11 @@ de-encapsulates the headers, converting the original packet into a parsed repres
 parser can be represented as a state machine without cycles (direct acyclic graph), with one initial state 
 (start) and two final states (accept or reject).
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/5A.png
 
 **(a)** 
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/5B.png
 
 **(b)** 
 

@@ -5,7 +5,7 @@ Now it is time to define how the parser works.
 
 **Step 1.** Click on the *parser.p4* file to display the content of the file.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/16.png
 
 **Figure 16.** Inspecting the *parser.p4* file.
 
@@ -19,7 +19,7 @@ and the metadata structs that we defined previously are passed as parameters to 
     transition parse_ethernet;
     }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/17.png
 
 **Figure 17.** Adding ``start`` state to the *parser.p4* file.
 
@@ -35,7 +35,7 @@ The start state is the state where the parser begins parsing the packet. Here we
         }
     }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/18.png
 
 **Figure 18.** Adding ``parse_ethernet`` state to the *parser.p4* file.
 
@@ -55,7 +55,7 @@ the parser terminates.
         }
     }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/19.png
 
 **Figure 19.** Adding ``parse_ipv4`` state to the *parser.p4* file.
 
@@ -71,7 +71,7 @@ to the ``parse_tcp`` state. Otherwise, the execution of the parser terminates.
         transition accept;
     }
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/20.png
 
 **Figure 20.** Adding ``parse_tcp`` state to the *parser.p4* file.
 
@@ -85,7 +85,7 @@ Compiling the P4 program
 **Step 1.** Open a new terminal in VS Code by clicking on Terminal in the menu bar and then New Terminal in the drop-down 
 menu.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/21.png
 
 **Figure 21.** Opening a new VS Code terminal.
 
@@ -93,7 +93,7 @@ menu.
 
     p4c-dpdk --arch pna main.p4 -o lab3.spec
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/22.png
 
 **Figure 22.** Compiling the P4 program using the VS Code terminal.
 

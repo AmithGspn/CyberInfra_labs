@@ -6,7 +6,7 @@ by running the provided Python script sender.py
 
     ip netns exec h1 python3 sender.py -r h2 -ph eth
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/31.png
 
 **Figure 31.** Sending a packet with an ethernet header from h1 to h2.
 
@@ -17,7 +17,7 @@ Running the Python script requires two parameters:
 
 **Step 2.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/32.png
 
 **Figure 32.** Switch back to the DPDK pipeline terminal.
 
@@ -26,7 +26,7 @@ Running the Python script requires two parameters:
     Observe the DPDK logs at the bottom of the terminal. These logs correspond to the packet processing 
     function executed in the .spec file generated when the P4 code is compiled.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/33.png
 
 **Figure 33.** Logs corresponding to the ethernet packet sent.
 
@@ -40,13 +40,13 @@ The “tx 1 pkt to port 1” log indicated that one packet has been sent to port
 
 **Step 3.** For a more readable output press enter in the terminal a few times (five times).
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/34.png
 
 **Figure 34.** Providing space in the terminal.
 
 **Step 4.** Switch back to the terminal tab in which the Python script was executed.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/35.png
 
 **Figure 35.** Switching back to the Python terminal.
 
@@ -55,19 +55,19 @@ Python script sender.py.::
 
     ip netns exec h1 python3 sender.py -r h2 -ph eth/ipv4
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/36.png
 
 **Figure 36.** Sending a packet with an Ethernet and IPv4 header from h1 to h2.
 
 **Step 6.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/37.png
 
 **Figure 37.** Switch back to the DPDK pipeline terminal.
 
 Observe the DPDK logs at the bottom of the terminal.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/38.png
 
 **Figure 38.** Logs corresponding to the IPv4 packet sent.
 
@@ -81,13 +81,13 @@ to host 2.
 
 **Step 7.** For a more readable output press enter in the terminal a few times (five times).
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/49.png
 
 **Figure 39.** Providing space in the terminal.
 
 **Step 8.** Switch back to the terminal tab in the Python script was executed.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/40.png
 
 **Figure 40.** Switching back to the Python terminal.
 
@@ -96,19 +96,19 @@ the provided Python script *sender.py*.
 
     ip netns exec h1 python3 sender.py -r h2 -ph eth/ipv4/tcp
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/41.png
 
 **Figure 41.** Sending a packet with an ethernet, IPv4, and TCP header from h1 to h2.
 
 **Step 10.** Switch back to the terminal tab in which the DPDK pipeline is running to observe the result.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/42.png
 
 **Figure 42.** Switch back to the DPDK pipeline terminal.
 
 Observe the DPDK logs at the bottom of the terminal:
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/43.png
 
 **Figure 43.** Logs corresponding to TCP the packet sent.
 
@@ -120,7 +120,7 @@ which corresponds to host 2.
 
 **Step 11.** Stop the DPDK pipeline by pressing ctrl+c.
 
-.. image:: images/Generic_workflow_design.png
+.. image:: images/44.png
 
 **Figure 44.** Stopping the DPDK pipeline.
 
