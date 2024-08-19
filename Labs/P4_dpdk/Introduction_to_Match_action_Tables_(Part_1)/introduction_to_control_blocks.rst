@@ -94,8 +94,8 @@ Table 1 contains the credentials of the virtual machine used for this lab.
 
 **Figure 2:** Main control block portion of a P4 program. The code implements a match-action table with exact match lookup.
 
-1.4	Add_on_miss capability
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+Add_on_miss capability
+~~~~~~~~~~~~~~~~~~~~~~
 
 The add_on_miss [1]_ table property is uniquely compatible with the P4 PNA. This feature helps by adding rules to a table 
 whenever a match is not found without the control plane’s contribution. Note that this feature is only applicable with 

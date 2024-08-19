@@ -2,7 +2,7 @@ Testing the application
 =======================
 
 **Step 1.** To test the application, we will send a packet with an ethernet header from h1 to h2 
-by running the provided Python script sender.py
+by running the provided Python script sender.py::
 
     ip netns exec h1 python3 sender.py -r h2 -ph eth
 
