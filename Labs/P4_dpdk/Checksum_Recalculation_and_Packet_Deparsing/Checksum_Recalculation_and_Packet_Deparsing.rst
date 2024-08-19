@@ -1,5 +1,5 @@
-Checksum Recalculation and Packet Deparsing
-===========================================
+Lab 7: Checksum Recalculation and Packet Deparsing
+==================================================
 
 This lab describes how to recompute the checksum of a header. Recomputing the checksum is 
 necessary if the packet header was modified by the P4 program. The lab also describes how a 

@@ -1,5 +1,5 @@
-Populating and Managing Match-action Tables at Runtime
-======================================================
+Lab 6: Populating and Managing Match-action Tables at Runtime
+=============================================================
 
 This lab describes how to populate and manage match-action tables at runtime. It then explains 
 a tool (DPDK pipeline CLI) that is used to execute DPDK commands at runtime.

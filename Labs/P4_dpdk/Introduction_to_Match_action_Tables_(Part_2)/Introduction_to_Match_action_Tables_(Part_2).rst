@@ -1,5 +1,5 @@
-Introduction to Match-action Tables (Part 2)
-============================================
+Lab 5: Introduction to Match-action Tables (Part 2)
+===================================================
 
 This lab describes match-action tables and how to define them in a P4 program. It then explains the different types of matching that can be performed on keys. The lab further shows how to track the misses/hits of a table key while receiving a packet.
 

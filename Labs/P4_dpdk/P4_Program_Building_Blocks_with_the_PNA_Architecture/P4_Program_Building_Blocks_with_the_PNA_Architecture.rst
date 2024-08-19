@@ -1,5 +1,5 @@
-P4 Program Building Blocks with the PNA Architecture
-====================================================
+Lab 2: P4 Program Building Blocks with the PNA Architecture
+===========================================================
 
 This lab provides guidance to the process of building the P4 coding blocks 
 compatible with the PNA architecture that will be compiled into a DPDK pipeline. 

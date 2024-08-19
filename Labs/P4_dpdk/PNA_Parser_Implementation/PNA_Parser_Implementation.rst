@@ -1,5 +1,5 @@
-PNA Parser Implementation
-=========================
+Lab 3: PNA Parser Implementation
+================================
 
 This lab starts by describing how to define custom headers in a P4 program. It then explains 
 how to implement a simple parser that parses the defined headers. The lab further shows how to 

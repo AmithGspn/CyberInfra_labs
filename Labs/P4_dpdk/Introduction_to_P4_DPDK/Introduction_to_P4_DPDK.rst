@@ -1,5 +1,5 @@
-Introduction to P4 DPDK
-=======================
+Lab 1: Introduction to P4 DPDK
+==============================
 
 This lab provides an introduction to DPDK, a software-based packet processing acceleration tool. 
 It demonstrates how to build a topology from the command-line interface (CLI) and provides an 
