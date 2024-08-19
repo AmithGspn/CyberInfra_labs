@@ -9,8 +9,6 @@ Namespaces are a feature that partitions Linux resources. Linux namespaces provi
 networks that enable network isolation and independent operations. Each network namespace has its own networking 
 devices, IP addresses, routing tables, and firewall rules [8]_.
 
-.. _ref8:
-
 Creating namespaces
 +++++++++++++++++++
 
