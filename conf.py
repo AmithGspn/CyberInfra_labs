@@ -7,7 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'CyberInfra labs'
-copyright = '2024, Amith GSPN'
+copyright = '2024, CILab at USC'
 author = 'Amith GSPN'
 
 # -- General configuration ---------------------------------------------------
