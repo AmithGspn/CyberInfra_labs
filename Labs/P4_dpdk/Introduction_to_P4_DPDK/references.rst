@@ -12,7 +12,7 @@ References
    2019 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays, 2019. 7. P4lang, 
    “DPDK Backend”, [Online]. Available: https://tinyurl.com/cw29ubxa.
 #. P4lang, “DPDK Backend”, [Online]. Available: https://tinyurl.com/cw29ubxa. 
-#. DPDK, “Memory in DPDK, Part 1: General Concepts”, [Online]. Available: 
+.. [8] DPDK, “Memory in DPDK, Part 1: General Concepts”, [Online]. Available: 
    https://www.dpdk.org/memory-in-dpdk-part-1-general-concepts/.
 #. Toptal, “Separation anxiety: A tutorial for isolating your system with Linux namespaces”, 
    [Online]. Available: https://tinyurl.com/3wm32dbd.

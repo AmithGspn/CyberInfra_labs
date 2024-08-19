@@ -9,9 +9,6 @@ Namespaces are a feature that partitions Linux resources. Linux namespaces provi
 networks that enable network isolation and independent operations. Each network namespace has its own networking 
 devices, IP addresses, routing tables, and firewall rules [8]_.
 
-.. [8] DPDK, “Memory in DPDK, Part 1: General Concepts”, [Online]. Available: 
-   https://www.dpdk.org/memory-in-dpdk-part-1-general-concepts/.
-
 Creating namespaces
 +++++++++++++++++++
 
