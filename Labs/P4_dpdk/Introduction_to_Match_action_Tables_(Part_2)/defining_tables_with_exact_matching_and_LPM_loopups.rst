@@ -53,11 +53,11 @@ tables and their actions, and then invoke them inside the block.
 Insert the code below inside the *MainControl* control block::
 
     action forward_exact (EthernetAddress dstAddr, PortId_t port_id) {
-    send_to_port(port_id);
-    hdr.ethernet.srcAddr = hdr.ethernet.dstAddr;
-    hdr.ethernet.dstAddr = dstAddr;
-    hdr.ipv4.ttl = hdr.ipv4.ttl - 1;
-}
+        send_to_port(port_id);
+        hdr.ethernet.srcAddr = hdr.ethernet.dstAddr;
+        hdr.ethernet.dstAddr = dstAddr;
+        hdr.ipv4.ttl = hdr.ipv4.ttl - 1;
+    }
 
 .. image:: images/6.png
 
@@ -88,11 +88,11 @@ other variables. In line 12, we are decrementing the TTL value of the header fie
 nsert the code below inside the *MainControl* control block::
 
     action forward_lpm (EthernetAddress dstAddr, PortId_t port) {
-    send_to_port(port_id);
-    hdr.ethernet.srcAddr = hdr.ethernet.dstAddr;
-    hdr.ethernet.dstAddr = dstAddr;
-    hdr.ipv4.ttl = hdr.ipv4.ttl - 1;
-}
+        send_to_port(port_id);
+        hdr.ethernet.srcAddr = hdr.ethernet.dstAddr;
+        hdr.ethernet.dstAddr = dstAddr;
+        hdr.ipv4.ttl = hdr.ipv4.ttl - 1;
+    }
 
 .. image:: images/7.png
 
@@ -108,8 +108,8 @@ nsert the code below inside the *MainControl* control block::
 MainControl control block::
 
      action drop() {
-    drop_packet();
-}
+        drop_packet();
+    }
 
 .. image:: images/8.png
 
@@ -122,14 +122,14 @@ the packet to be dropped.
 following piece of code inside the body of the *MainControl* control block::
 
     table forwarding_exact {
-    key = {
-        hdr.ipv4.dstAddr: exact;
+        key = {
+            hdr.ipv4.dstAddr: exact;
+        }
+        actions = {
+            forward_exact;
+        }
+        size = 1024;
     }
-    actions = {
-        forward_exact;
-    }
-    size = 1024;
-}
 
 .. image:: images/9.png
 
@@ -147,16 +147,16 @@ address of the packet. The table will be invoking the forward and the drop actio
 and hence,those actions will be listed inside the table definition.::
 
     table forwarding_lpm {
-    key = {
-        hdr.ipv4.dstAddr: lpm;
+        key = {
+            hdr.ipv4.dstAddr: lpm;
+        }
+        actions = {
+            forward_lpm;
+            drop;
+        }
+        size = 1024;
+        default_action = drop();
     }
-    actions = {
-        forward_lpm;
-        drop;
-    }
-    size = 1024;
-    default_action = drop();
-}
 
 .. image:: images/10.png
 
