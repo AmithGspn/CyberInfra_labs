@@ -110,9 +110,6 @@ Memory in DPDK
 Memory management is very important to maintain performance measures. DPDK supports various memory 
 management features such as Hugepages, Non-uniform Memory Access (NUMA) nodes pinning, and memory pools [8]_.
 
-.. [8] DPDK, “Memory in DPDK, Part 1: General Concepts”, [Online]. Available: 
-   https://www.dpdk.org/memory-in-dpdk-part-1-general-concepts/.
-
 A hugepage is a memory management technique used in modern computer systems to improve performance by using 
 larger memory blocks (pages) than the default page size. When the DPDK application initializes and requests 
 a certain number of hugepages, the operating system will reserve a large block of memory and allocate it to 
