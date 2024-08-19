@@ -13,7 +13,9 @@ provided Python script *sender.py*::
 
 .. image:: images/24.png
 
-**Figure 24:**  Sending a packet from h1 to h3.
+.. raw:: html
+
+    <div style="text-align: center;"><strong>Figure 24:</strong>  Sending a packet from h1 to h3.</div>
 
 Running the Python script requires two parameters:
 
