@@ -17,6 +17,13 @@ CyberInfra Labs
       <em>“Collaborative Research: CyberTraining: Implementation: Medium: CyberTraining on Accelerating Infrastructure Workloads using Next-Generation SmartNICs/DPUs”</em>
    </p>
 
+Network packet processing faces significant performance challenges due to kernel overheads. These issues have become more pronounced with the rapid growth of network traffic. 
+To address these challenges, the Data Plane Development Kit (DPDK) was developed. DPDK bypasses the kernel and operates directly in user space, offering significant improvements 
+in performance and latency for packet processing tasks. However, DPDK's steep learning curve presents a barrier to entry for developers and network administrators. In recent 
+years, P4 has emerged as a language specifically designed for expressing packet processing data paths. Building on this development, P4-DPDK has been introduced as a new technology 
+that bridges P4 and DPDK. It allows developers to create P4 code which is then translated into a DPDK pipeline, combining the expressiveness of P4 with the performance benefits 
+of DPDK. This lab series offers a hands-on experience on the basics of P4-DPDK.
+
 .. toctree::
    :maxdepth: 2
    :caption: Labs:
