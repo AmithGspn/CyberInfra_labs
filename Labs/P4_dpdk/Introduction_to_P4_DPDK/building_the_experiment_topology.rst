@@ -48,7 +48,7 @@ In this section, you will attach dtap0 to namespace h1 and dtap1 to namespace h2
 
 .. image:: images/fig_32.png
 
-**Figure 32:** Linking namespace h1 to *dtap0*.
+.. centered:: **Figure 32:** Linking namespace h1 to *dtap0*.
 
 **Step 2.** Type the following command to link the interface dtap1 to the namespace h2::
 
