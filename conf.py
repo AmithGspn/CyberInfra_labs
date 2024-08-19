@@ -14,13 +14,7 @@ author = 'Amith GSPN'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    'sphinx.ext.todo',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages',
+    'sphinx.ext.autosectionlabel', 'sphinx.ext.autodoc', 'sphinx.ext.intersphinx'
 ]
 
 templates_path = ['_templates']
