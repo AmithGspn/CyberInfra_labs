@@ -27,7 +27,7 @@ DPDK pipeline is running to observe the result.
 
 **Figure 25:**  Switch back to the DPDK pipeline terminal.
 
-..note::
+.. note::
     Observe the DPDK logs at the bottom of the terminal. 
     These logs correspond to the packet processing function 
     executed in the .spec file generated when the P4 code is 
