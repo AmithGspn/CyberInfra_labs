@@ -34,22 +34,15 @@ overhead and improves performance. DPDK functionalities can also run on multiple
 specific tasks running on each core using core affinity which prevents task switching among 
 different cores and therefore enhances performance [1]_.
 
-.. [1] H. Zhu, “Data Plane Development Kit (DPDK): A Software Optimization Guide to the User 
-   Space-based Network Application”, CRC Press, 2020.
-
 .. image:: images/fig_1.png
 
 **Figure 1:** Software packet processing. (a) standard packet processing (interrupt-based), 
 (b) kernel-bypass packet processing (polling mode) [2]_.
 
-.. [2] R. Donata, “What is DPDK?”, [Online]. Available: https://tinyurl.com/yfc73h7c.
-
 In network processing, both the CPU and the NIC frequently require access to data stored in memory 
 such as cache and Dynamic Random Access Memory (DRAM). To optimize memory access, DPDK supports 
 the use Hugepage and memory pools. To sever memory management purposes, DPDK swiftly moves data 
 into the cache to prevent CPU overheads [3]_.
-
-.. [3] DPDK, “Data Plane Development Kit documentation”, Release 2.2.0, 2016.
 
 DPDK pipeline model
 ~~~~~~~~~~~~~~~~~~~
@@ -62,14 +55,10 @@ to create entire network applications. See Figure 2. A DPDK pipeline has three m
 input ports, tables, and output ports. Each pipeline can be instantiated multiple times, with 
 each instance mapped to a different CPU thread [4]_.
 
-.. [4] Intel, “Introduction to the Data Plane Development Kit (DPDK) Packet Framework”, [Online]. 
-   Available: https://tinyurl.com/254r9sc5.
-
 .. image:: images/fig_2.png
 
 **Figure 2:** DPDK packet framework pipeline block [5]_.
 
-.. [5] DPDK, “rte_pipeline.h File Reference”, [Online]. Available: https://tinyurl.com/sh9254cs.
 P4 programming
 ~~~~~~~~~~~~~~
 
@@ -81,10 +70,6 @@ has expanded to be compatible with a diversity of devices called P4 targets, inc
 P4 is specifically designed to program the data plane of the target. The P4 code is written by the 
 user in a specific architecture to ensure compatibility with the target. Afterward, the P4 code is 
 ready to be compiled so that it can be executed by the target [6]_.
-
-.. [6] S. Ibanez, “The p4-> netfpga workflow for line-rate packet processing”, Proceedings of the 
-   2019 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays, 2019. 7. P4lang, 
-   “DPDK Backend”, [Online]. Available: https://tinyurl.com/cw29ubxa.
 
 .. image:: images/fig_3.png
 
@@ -102,15 +87,11 @@ pipeline. Subsequently, a C code is generated from the .spec file. This code inc
 corresponding to each action and control block. A C compiler then generates a shared object (.so) from 
 the C code. Finally, the shared object is needed to execute the application [7]_.
 
-.. [7] P4lang, “DPDK Backend”, [Online]. Available: https://tinyurl.com/cw29ubxa.
-
 Memory in DPDK
 ~~~~~~~~~~~~~~
 
 Memory management is very important to maintain performance measures. DPDK supports various memory 
 management features such as Hugepages, Non-uniform Memory Access (NUMA) nodes pinning, and memory pools [8]_.
-
-.. _ref8:
 
 A hugepage is a memory management technique used in modern computer systems to improve performance by using 
 larger memory blocks (pages) than the default page size. When the DPDK application initializes and requests 
