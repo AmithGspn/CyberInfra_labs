@@ -26,6 +26,12 @@ of DPDK. This lab series offers a hands-on experience on the basics of P4-DPDK.
 
 .. toctree::
    :maxdepth: 2
+   :caption: VM Installation:
+
+   Labs/VM_Installation/vm_installation
+
+.. toctree::
+   :maxdepth: 2
    :caption: Labs:
 
    Labs/P4_dpdk/Introduction_to_P4_DPDK/Introduction_to_P4_DPDK
