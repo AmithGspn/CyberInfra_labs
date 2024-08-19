@@ -17,7 +17,7 @@ Now that all the required scripts are prepared, we can run the pipeline.
 **Figure 23.** Maximizing Linux terminal window.
 
 **Step 2.** Issue the command sudo su on the terminal to enter root mode. When prompted for a password, 
-type password and hit enter. Note that the password will not be visible as you type it.::
+type password and hit enter. Note that the password will not be visible as you type it.:
 
     sudo su
 
