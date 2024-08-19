@@ -81,7 +81,7 @@ to host 2.
 
 **Step 7.** For a more readable output press enter in the terminal a few times (five times).
 
-.. image:: images/49.png
+.. image:: images/39.png
 
 **Figure 39.** Providing space in the terminal.
 

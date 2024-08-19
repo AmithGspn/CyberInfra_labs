@@ -56,8 +56,8 @@ forwarding program, we have two actions:
 the MainControl control block::
 
     action forward (PortId_t port_id) {
-    send_to_port(port_id);
-}
+        send_to_port(port_id);
+    }
 
 .. image:: images/7.png
 
@@ -72,8 +72,8 @@ number specified as a parameter.
 block::
 
     action drop() {
-    drop_packet();
-}
+        drop_packet();
+    }
 
 .. image:: images/8.png
 
@@ -84,11 +84,12 @@ The ``drop()`` action invokes a primitive action ``drop_packet()`` that causes t
 **Step 5.** Now we will define the table named ``forwarding``. Write the following piece of code inside the 
 body of the MainControl control block::
 
-     table forwarding {
+    table forwarding {
 
-}
+    }
 
-.. image:: images/9
+.. image:: images/9.png
+
 **Figure 9:** Declaring the ``forwarding`` table.
 
 Tables require keys and actions. In the next step, we will define a key.
@@ -96,8 +97,8 @@ Tables require keys and actions. In the next step, we will define a key.
 **Step 6.** Add the following code inside the forwarding table::
 
     key = {
-    hdr.ipv4.dstAddr:exact;
-}
+        hdr.ipv4.dstAddr:exact;
+    }
 
 .. image:: images/10.png
 
@@ -111,9 +112,9 @@ matched as is against a value specified later in the control plane.
 in this table:: 
 
     actions = {
-    forward;
-    drop;
-}
+        forward;
+        drop;
+    }
 
 .. image:: images/11.png
 
@@ -134,12 +135,12 @@ processing. It is required in every control block, otherwise the program will no
 sequence of tables to be invoked, among other packet processing instructions::
 
     apply {
-    if(hdr.ipv4.isValid()) {
-	 forwarding.apply();
-    }else{
-    	 drop(); 
+        if(hdr.ipv4.isValid()) {
+            forwarding.apply();
+        } else{
+            drop(); 
+        }
     }
-}
 
 .. image:: images/13.png
 

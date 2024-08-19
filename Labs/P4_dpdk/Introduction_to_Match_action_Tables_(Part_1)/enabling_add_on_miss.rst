@@ -43,8 +43,8 @@ found in the .spec file created after the P4 code is compiled.
 in the designated empty space in line 9::
 
     struct forward_action_keys {
-    PortId_t port_id;
-}
+        PortId_t port_id;
+    }
 
 .. image:: images/32.png
 
@@ -102,12 +102,12 @@ the ``action_params`` equal to the defined structure forward_params. Finally, th
 
 **Step 9.** Add the following code inside the forwarding table::
 
-     add_on_miss = true;
+    add_on_miss = true;
     default_action = forward_miss;
 
 .. image:: images/36.png
 
-**Figure 36:** Enabling the ``add_on_miss `` feature.
+**Figure 36:** Enabling the ``add_on_miss`` feature.
 
 The ``add_on_miss`` parameter is set to true to enable the feature. We also set the forward_miss as 
 the default action.

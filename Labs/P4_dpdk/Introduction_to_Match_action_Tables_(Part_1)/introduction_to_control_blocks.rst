@@ -90,7 +90,7 @@ Table 1 contains the credentials of the virtual machine used for this lab.
    this program, the ``forwarding`` table is enabled when the incoming packet has a valid IPv4 header. Otherwise, the 
    packet is dropped.
 
-   .. image:: images/2.png
+.. image:: images/2.png
 
 **Figure 2:** Main control block portion of a P4 program. The code implements a match-action table with exact match lookup.
 
