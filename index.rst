@@ -12,9 +12,9 @@ CyberInfra Labs
 .. raw:: html
 
    <p style="text-align: center;">
-      <em>Award 2118311</em> 
+      <em>Award 2417823</em> 
       <br></br>
-      <em>“Cybertraining on P4 Programmable Devices using an Online Scalable Platform with Physical and Virtual Switches and Real Protocol Stacks”</em>
+      <em>“Collaborative Research: CyberTraining: Implementation: Medium: CyberTraining on Accelerating Infrastructure Workloads using Next-Generation SmartNICs/DPUs”</em>
    </p>
 
 .. toctree::
