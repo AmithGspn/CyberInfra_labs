@@ -41,7 +41,7 @@ In this example, P4-DPDK VM is installed.
 
 .. image:: images/2.jpeg
 
-**Figure 2:** Selection of .ova file.
+**Figure 2:** Selection of *.ova* file.
 
 **Step 6.** Select the destination folder and click on *Import*. Wait until it finishes. This process 
 takes about 5 minutes.
