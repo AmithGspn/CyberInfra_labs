@@ -15,8 +15,6 @@ copying the packet data from the NIC’s buffer to the network stack’s buffer.
 packet to the correct user-level application (e.g., a web browser or email client), the network 
 stack relies on system calls [1]_.
 
-.. _1: references.html#system_calls_reference
-
 While the above steps of standard packet processing shown in Figure 1 (a) are necessary for 
 proper packet handling, they come at a cost. The additional processing involved in interrupt 
 handling, memory copying, and system calls creates overhead. To mitigate this, modern systems 
@@ -32,6 +30,8 @@ as it consistently polls for incoming packets2. This approach minimizes interrup
 overhead and improves performance. DPDK functionalities can also run on multiple cores with 
 specific tasks running on each core using core affinity which prevents task switching among 
 different cores and therefore enhances performance [1]_.
+
+.. _1: references.html#system_calls_reference
 
 .. image:: images/fig_1.png
 
@@ -104,8 +104,6 @@ Memory in DPDK
 Memory management is very important to maintain performance measures. DPDK supports various memory 
 management features such as Hugepages, Non-uniform Memory Access (NUMA) nodes pinning, and memory pools [8]_.
 
-.. _8: references.html#system_calls_reference
-
 A hugepage is a memory management technique used in modern computer systems to improve performance by using 
 larger memory blocks (pages) than the default page size. When the DPDK application initializes and requests 
 a certain number of hugepages, the operating system will reserve a large block of memory and allocate it to 
@@ -123,7 +121,9 @@ held by the system.
 
 .. image:: images/fig_4.png
 
-**Figure 4:** NUMA node pinning8.
+**Figure 4:** NUMA node pinning [8]_.
+
+.. _8: references.html#system_calls_reference
 
 DPDK also provides a memory pool manager supported by a library (librte_mbuf) which is built on top of the 
 DPDK APIs. It is responsible for allocating pools of objects in the memory. This library also allows the 
