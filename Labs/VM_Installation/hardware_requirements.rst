@@ -7,13 +7,13 @@ labs.
 .. table:: Table 1: Hardware requirements.
    :align: center
    
-   =========  =============  
-              **P4-DPDK**  
-   =========  =============  
-   CPU        dtap0           
-   Memory     dtap1 
+   ==============  =============  
+   **components**  **P4-DPDK**  
+   ==============  =============  
+   CPU             dtap0           
+   Memory          dtap1 
    Hard Disk         
-   =========  =============  
+   =========       =============  
 
 .. warning::
 
@@ -34,26 +34,26 @@ In this example, P4-DPDK VM is installed.
 
 **Step 4.** Click on *File -> Import Appliance*
 
-.. image:: images/1.png
+.. image:: images/1.jpeg
 
 **Figure 1:** Import Appliance.
 
 **Step 5.** Browse to the folder that contains the .ova file.
 
-.. image:: images/2.png
+.. image:: images/2.jpeg
 
 **Figure 2:** Selection of .ova file.
 
 **Step 6.** Select the destination folder and click on *Import*. Wait until it finishes. This process 
 takes about 5 minutes.
 
-.. image:: images/4.png
+.. image:: images/4.jpeg
 
 **Figure 3:** Appliance settings.
 
 **Step 7.** Start the virtual machine by clicking on *Start*.
 
-.. image:: images/4.png
+.. image:: images/4.jpeg
 
 **Figure 3:** Start the virtual machine.
 
