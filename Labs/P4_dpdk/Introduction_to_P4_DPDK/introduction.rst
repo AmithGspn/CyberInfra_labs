@@ -33,8 +33,6 @@ overhead and improves performance. DPDK functionalities can also run on multiple
 specific tasks running on each core using core affinity which prevents task switching among 
 different cores and therefore enhances performance [1]_.
 
-.. _1: references.html#system_calls_reference
-
 .. image:: images/fig_1.png
 
 **Figure 1:** Software packet processing. (a) standard packet processing (interrupt-based), 
