@@ -127,11 +127,6 @@ held by the system.
 
 **Figure 4:** NUMA node pinning `[8]_ <references.html>`_.
 
-
-
-.. [8] DPDK, “Memory in DPDK, Part 1: General Concepts”, [Online]. Available: 
-   https://www.dpdk.org/memory-in-dpdk-part-1-general-concepts/.
-
 DPDK also provides a memory pool manager supported by a library (librte_mbuf) which is built on top of the 
 DPDK APIs. It is responsible for allocating pools of objects in the memory. This library also allows the 
 user to tag a pool with a defined name to address the allocated memory.
