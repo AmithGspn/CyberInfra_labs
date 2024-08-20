@@ -10,9 +10,9 @@ labs.
    ==============  ===========  
    **Components**  **P4-DPDK**  
    ==============  ===========  
-   CPU             dtap0           
-   Memory          dtap1 
-   Hard Disk       dtap2
+   CPU             3 cores           
+   Memory          8 GB 
+   Hard Disk       15 GB
    ==============  ===========
 
 .. warning::
