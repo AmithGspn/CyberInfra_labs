@@ -7,13 +7,13 @@ labs.
 .. table:: Table 1: Hardware requirements.
    :align: center
    
-   ==============  =============  
+   ==============  ===========  
    **Components**  **P4-DPDK**  
-   ==============  =============  
+   ==============  ===========  
    CPU             dtap0           
    Memory          dtap1 
    Hard Disk       dtap2
-   =========       =============  
+   ==============  ===========
 
 .. warning::
    You can reduce the hardware requirements in order to run the VM on your own 
