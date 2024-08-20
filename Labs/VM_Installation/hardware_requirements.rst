@@ -17,8 +17,8 @@ labs.
 
 .. warning::
 
-You can reduce the hardware requirements in order to run the VM on your own 
-computer. However, the performance might be compromised.
+   You can reduce the hardware requirements in order to run the VM on your own 
+   computer. However, the performance might be compromised.
 
 Installation
 ++++++++++++
