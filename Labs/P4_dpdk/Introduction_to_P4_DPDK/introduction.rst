@@ -13,7 +13,7 @@ tasks. It includes protocols, drivers, and other networking functionalities. Onc
 packet’s location in memory, it transfers the packet to the network stack. This transfer involves 
 copying the packet data from the NIC’s buffer to the network stack’s buffer. To deliver the 
 packet to the correct user-level application (e.g., a web browser or email client), the network 
-stack relies on system calls [1]_.
+stack relies on system calls.
 
 While the above steps of standard packet processing shown in Figure 1 (a) are necessary for 
 proper packet handling, they come at a cost. The additional processing involved in interrupt 
