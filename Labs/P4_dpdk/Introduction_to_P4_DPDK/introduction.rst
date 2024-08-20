@@ -125,7 +125,9 @@ held by the system.
 
 .. image:: images/fig_4.png
 
-**Figure 4:** NUMA node pinning [8]_.
+**Figure 4:** NUMA node pinning `[8]_ <references.html>`_.
+
+
 
 .. [8] DPDK, “Memory in DPDK, Part 1: General Concepts”, [Online]. Available: 
    https://www.dpdk.org/memory-in-dpdk-part-1-general-concepts/.
