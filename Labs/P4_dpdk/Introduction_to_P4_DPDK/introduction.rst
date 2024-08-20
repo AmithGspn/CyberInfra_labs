@@ -98,9 +98,7 @@ DPDK SWX API, allowing them to run efficiently on multi-core CPUs. The primary o
 compiler given a P4 code is the specifications file (.spec). This file is needed to configure the DPDK 
 pipeline. Subsequently, a C code is generated from the .spec file. This code includes C functions 
 corresponding to each action and control block. A C compiler then generates a shared object (.so) from 
-the C code. Finally, the shared object is needed to execute the application [7]_.
-
-.. [7] P4lang, “DPDK Backend”, [Online]. Available: https://tinyurl.com/cw29ubxa.
+the C code. Finally, the shared object is needed to execute the application `[7] <references.html>`_.
 
 Memory in DPDK
 ~~~~~~~~~~~~~~
@@ -125,7 +123,7 @@ held by the system.
 
 .. image:: images/fig_4.png
 
-**Figure 4:** NUMA node pinning `[8]_ <references.html>`_.
+**Figure 4:** NUMA node pinning `[8] <references.html>`_.
 
 DPDK also provides a memory pool manager supported by a library (librte_mbuf) which is built on top of the 
 DPDK APIs. It is responsible for allocating pools of objects in the memory. This library also allows the 
