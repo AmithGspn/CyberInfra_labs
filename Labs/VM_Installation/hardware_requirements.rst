@@ -47,13 +47,13 @@ In this example, P4-DPDK VM is installed.
 **Step 6.** Select the destination folder and click on *Import*. Wait until it finishes. This process 
 takes about 5 minutes.
 
-.. image:: images/3.png
+.. image:: images/4.png
 
 **Figure 3:** Appliance settings.
 
 **Step 7.** Start the virtual machine by clicking on *Start*.
 
-.. image:: images/3.png
+.. image:: images/4.png
 
 **Figure 3:** Start the virtual machine.
 
