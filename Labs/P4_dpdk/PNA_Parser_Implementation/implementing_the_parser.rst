@@ -16,7 +16,7 @@ and the metadata structs that we defined previously are passed as parameters to 
 **Step 2.** Add the start state inside the parser by inserting the following code.::
 
     state start {
-    transition parse_ethernet;
+        transition parse_ethernet;
     }
 
 .. image:: images/17.png
