@@ -33,26 +33,26 @@ In this example, P4-DPDK VM is installed.
 
 **Step 4.** Click on *File -> Import Appliance*
 
-.. image:: images/1.jpeg
+.. image:: images/1.png
 
 **Figure 1:** Import Appliance.
 
 **Step 5.** Browse to the folder that contains the .ova file.
 
-.. image:: images/2.jpeg
+.. image:: images/2.png
 
 **Figure 2:** Selection of *.ova* file.
 
 **Step 6.** Select the destination folder and click on *Import*. Wait until it finishes. This process 
 takes about 5 minutes.
 
-.. image:: images/4.jpeg
+.. image:: images/3.png
 
 **Figure 3:** Appliance settings.
 
 **Step 7.** Start the virtual machine by clicking on *Start*.
 
-.. image:: images/4.jpeg
+.. image:: images/4.png
 
 **Figure 3:** Start the virtual machine.
 
