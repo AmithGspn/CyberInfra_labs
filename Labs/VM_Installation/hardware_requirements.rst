@@ -22,14 +22,14 @@ labs.
 Installation
 ++++++++++++
 
-The following steps show how to install P4-DPDK on Oracle Virtual Box 6.0.
+The following steps show how to install P4-DPDK on Oracle Virtual Box 7.0.
 
-**Step 1.** Download and install Oracle Virtual Box 6.0.
+**Step 1.** Download and install Oracle Virtual Box 7.0.
 
 **Step 2.** Download the .ova file `P4-DPDK_H2_POD <https://cilab.s3.us-east-2.amazonaws.com/VMs/P4-DPDK_H2_POD.ova>`_ to be installed. 
 In this example, P4-DPDK VM is installed.
 
-**Step 3.** Open Oracle Virtual Box 6.0.
+**Step 3.** Open Oracle Virtual Box 7.0.
 
 **Step 4.** Click on *File -> Import Appliance*
 
