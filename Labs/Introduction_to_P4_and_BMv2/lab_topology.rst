@@ -1,4 +1,4 @@
-lab topology
+Lab Topology
 ============
 
 Let’s get started with creating a simple Mininet topology using MiniEdit. The topology uses 10.0.0.0/8 

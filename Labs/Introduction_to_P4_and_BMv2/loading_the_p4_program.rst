@@ -1,4 +1,4 @@
-loading the p4 program
+Loading The P4 Program
 ======================
 
 This section shows the steps required to implement a P4 program. It describes the editor that will be used to modify the P4 

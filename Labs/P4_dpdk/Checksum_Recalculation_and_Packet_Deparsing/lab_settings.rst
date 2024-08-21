@@ -1,4 +1,4 @@
-Lab settings
+Lab Settings
 ++++++++++++
 
 Table 1 contains the credentials of the virtual machine used for this lab. 

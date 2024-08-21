@@ -1,4 +1,4 @@
-lab topology
+Lab Topology
 ============
 
 Consider Figure 2. Three network namespaces, h1, h2, and h3 are linked to the running P4-DPDK 

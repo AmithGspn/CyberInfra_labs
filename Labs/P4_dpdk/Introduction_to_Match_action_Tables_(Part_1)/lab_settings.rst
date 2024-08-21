@@ -1,4 +1,4 @@
-Lab settings
+Lab Settings
 ++++++++++++
 
 The information in Table 1 provides the credentials of the Client machine. 

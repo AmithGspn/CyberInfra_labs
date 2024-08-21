@@ -1,4 +1,4 @@
-Building the P4-DPDK pipeline and the lab topology
+Building The P4-DPDK Pipeline and The Lab Topology
 ==================================================
 
 This section shows the steps required to compile, build, and run the P4-DPDK along with building the lab 

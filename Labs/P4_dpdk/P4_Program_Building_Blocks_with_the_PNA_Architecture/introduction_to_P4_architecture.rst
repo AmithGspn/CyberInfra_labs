@@ -1,4 +1,4 @@
-Introduction to P4 architiecture
+Introduction to P4 Architiecture
 ================================
 
 A P4 architecture represents a programming model that outlines the capabilities 

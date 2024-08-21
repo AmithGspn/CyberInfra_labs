@@ -1,4 +1,4 @@
-lab topology
+Lab Topology
 ============
 
 Consider Figure 6. Two network namespaces, h1 and h2, are linked to the running P4-DPDK pipeline, 
@@ -9,7 +9,7 @@ from each other and the root namespace.
 
 **Figure 6:** Lab topology.
 
-Lab settings
+Lab Settings
 ++++++++++++
 
 Table 1 contains the credentials of the virtual machine used for this lab. 

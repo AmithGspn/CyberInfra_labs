@@ -1,4 +1,4 @@
-Implementing the parser
+Implementing The Parser
 =======================
 
 Now it is time to define how the parser works.

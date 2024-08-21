@@ -1,4 +1,4 @@
-Testing exact matching with add-on-miss enabled
+Testing Exact Matching With add-on-miss Enabled
 ===============================================
 
 **Step 1.** To test exact matching with add-on-miss, we will send a packet with an ethernet, 

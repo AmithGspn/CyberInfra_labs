@@ -1,4 +1,4 @@
-lab topology
+lab Topology
 ============
 
 Consider Figure 5. Two network namespaces, h1 and h2, are linked to the running P4-DPDK pipeline, enabling 

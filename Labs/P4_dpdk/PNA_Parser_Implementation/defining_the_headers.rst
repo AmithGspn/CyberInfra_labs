@@ -1,4 +1,4 @@
-Defining the headers
+Defining The Headers
 ====================
 
 This section demonstrates how to define custom headers in a P4 program. It also shows how to use 

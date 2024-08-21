@@ -1,4 +1,4 @@
-Running commands at runtime in the DPDK pipeline CLI
+Running Commands at Runtime in the DPDK Pipeline CLI
 ====================================================
 
 This section shows the steps required to open and run commands in the DPDK pipeline CLI.

@@ -1,4 +1,4 @@
-configuring switch s1
+Configuring Switch s1
 =====================
 
 Mapping P4 program’s ports

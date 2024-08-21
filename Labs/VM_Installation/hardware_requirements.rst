@@ -1,4 +1,4 @@
-Hardware requirements
+Hardware Requirements
 =====================
 
 Table 1 specifies the hardware requirements to achieve the performance depicted in the 

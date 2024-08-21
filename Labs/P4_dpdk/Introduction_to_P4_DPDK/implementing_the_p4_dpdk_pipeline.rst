@@ -1,4 +1,4 @@
-Implementing the p4 dpdk pipeline
+Implementing the P4 Dpdk Pipeline
 =================================
 
 This section shows the steps required to implement a P4-DPDK pipeline. It discusses the components 

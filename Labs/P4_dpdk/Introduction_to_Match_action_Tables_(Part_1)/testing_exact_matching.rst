@@ -1,4 +1,4 @@
-Testing exact matching
+Testing Exact Matching
 ======================
 
 **Step 1.** To test exact matching, we will send a packet with an ethernet, IPv4, and TCP header 

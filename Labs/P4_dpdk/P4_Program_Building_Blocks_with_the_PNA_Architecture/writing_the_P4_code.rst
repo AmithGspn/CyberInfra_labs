@@ -1,4 +1,4 @@
-Writing the P4 code
+Writing the P4 Code
 ===================
 
 This section shows the steps required to write the P4 code. 

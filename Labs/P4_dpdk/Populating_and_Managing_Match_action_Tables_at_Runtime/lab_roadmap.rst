@@ -1,5 +1,4 @@
-
-Lab roadmap
+Lab Roadmap
 ===========
 
 This lab is organized as follows: 

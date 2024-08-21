@@ -1,4 +1,4 @@
-Testing connectivity
+Testing Connectivity
 ====================
 
 **Step 1.** Test the connectivity between namespaces h1 and h2 using the ``ping`` command::

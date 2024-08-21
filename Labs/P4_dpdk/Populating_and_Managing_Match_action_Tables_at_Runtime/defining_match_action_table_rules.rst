@@ -1,4 +1,4 @@
-Defining match-action table rules
+Defining Match-Action Table Rules
 =================================
 
 This section demonstrates how to define the match-action table rules in text files. The rules will be added to the tables at runtime.
