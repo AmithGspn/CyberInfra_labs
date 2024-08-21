@@ -92,9 +92,9 @@ to host 2.
 **Figure 40.** Switching back to the Python terminal.
 
 **Step 9.** We will send a packet with an ethernet, IPv4, and TCP header from h1 to h2 by running 
-the provided Python script *sender.py*.
+the provided Python script *sender.py*.:
 
-    ip netns exec h1 python3 sender.py -r h2 -ph eth/ipv4/tcp
+ip netns exec h1 python3 sender.py -r h2 -ph eth/ipv4/tcp
 
 .. image:: images/41.png
 

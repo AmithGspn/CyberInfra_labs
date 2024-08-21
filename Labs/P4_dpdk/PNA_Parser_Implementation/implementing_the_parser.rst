@@ -30,8 +30,8 @@ The start state is the state where the parser begins parsing the packet. Here we
     state parse_ethernet {
         packet.extract(hdr.ethernet);
         transition select(hdr.ethernet.etherType) {
-        TYPE_IPV4: parse_ipv4;
-        default: accept;
+            TYPE_IPV4: parse_ipv4;
+            default: accept;
         }
     }
 
@@ -50,8 +50,8 @@ the parser terminates.
     state parse_ipv4 {
         packet.extract(hdr.ipv4);
         transition select(hdr.ipv4.protocol) {
-        TYPE_TCP: parse_tcp;
-        default: accept;
+            TYPE_TCP: parse_tcp;
+            default: accept;
         }
     }
 
