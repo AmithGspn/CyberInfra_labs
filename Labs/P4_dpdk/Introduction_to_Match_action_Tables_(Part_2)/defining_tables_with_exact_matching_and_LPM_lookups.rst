@@ -38,7 +38,7 @@ VS Code and opens the directory where the P4 program for this lab is located::
 Programming the control block
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Step 1. Click on the *control.p4* file to display the contents of the file. Use 
+**Step 1.** Click on the *control.p4* file to display the contents of the file. Use 
 the file explorer on the left-hand side of the screen to locate the file.
 
 .. image:: images/5.png

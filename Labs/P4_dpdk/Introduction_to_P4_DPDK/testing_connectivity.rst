@@ -1,7 +1,7 @@
 Testing connectivity
 ====================
 
-Step 1. Test the connectivity between namespaces h1 and h2 using the ``ping`` command.::
+**Step 1.** Test the connectivity between namespaces h1 and h2 using the ``ping`` command.::
 
     ip netns exec h1 ping 192.168.10.2 -c 4
 

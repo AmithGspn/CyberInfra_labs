@@ -165,7 +165,7 @@ The “tx 1 pkt to port 1” log in the third grey box indicates
 that the forwarding action is properly executed by sending one 
 packet to port 1 which corresponds to host 2.
 
-**Step 3. **Stop the DPDK pipeline by pressing ``ctrl+c``. 
+**Step 3.** Stop the DPDK pipeline by pressing ``ctrl+c``. 
 
 .. image:: images/37.png 
     
