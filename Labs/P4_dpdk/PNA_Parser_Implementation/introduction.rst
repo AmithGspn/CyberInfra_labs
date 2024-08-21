@@ -11,15 +11,12 @@ networking industry by enabling a top-down approach to the design of network app
 With this approach, the programmer or network operator can precisely describe features and how 
 packets are processed in the packet processing pipeline. DPDK
 
-With the Portable NIC Architecture (PNA) [1]_, the programmer defines the headers and corresponding 
+With the Portable NIC Architecture (PNA) `[1] <references.html>`_, the programmer defines the headers and corresponding 
 parser as well as actions executed in the pipeline and the deparser. The programmer has the 
 flexibility of defining custom headers (i.e., a header not standardized). Such capability is 
 not available in non-programmable devices. The Data Plane Development Kit (DPDK) accelerates 
 packet processing and enhances performance. With P4-DPDK, the programmability features of P4 
 and the acceleration capabilities of DPDK come together.
-
-.. [1] The P4 Language Consortium, “P4 Portable NIC Architecture (PNA)”, Version 0.5, 2021. 
-   [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
 
 .. image:: images/1.png
 
@@ -46,18 +43,12 @@ header format is shown in Figure 2 and the TCP header is shown in Figure 3.
 
 The code starts by including the core.p4 file (line 1) which defines some common types and variables 
 used in all P4 programs. For instance, the ``packet_in`` and ``packet_out`` extern types which represent 
-incoming and outgoing packets, respectively, are declared in core.p4 [2]_. Next, the pna.p4 [3]_ file is 
-included (line 2) to define the PNA architecture and all its externs used when writing P4 programs [4]_. 
+incoming and outgoing packets, respectively, are declared in core.p4 `[2] <references.html>`_. Next, the pna.p4 `[3] <references.html>`_ file is 
+included (line 2) to define the PNA architecture and all its externs used when writing P4 programs `[4] <references.html>`_. 
 Line 3 defines a 16-bit constant ``TYPE_IPV4`` with the value 0x800. Similarly, line 4 creates an 8-bit 
 constant ``TYPE_TCP`` with the value 6. This means that these variables can be used later in the P4 program 
 to reference the associated values. The typedef declarations (lines 8-9) are used to assign alternative 
 names to types.
-
-.. [2] P4lang, “p4c core.p4”. [Online]. Available: https://github.com/p4lang/p4c/blob/main/p4include/core.p4
-
-.. [3] P4lang, “pna.p4”, [Online]. Available: https://github.com/p4lang/pna/blob/main/pna.p4
-
-.. [4] P4 Language Tutorial. [Online]. Available: https://tinyurl.com/2p9cen9e
 
 The program in Figure 4 defines the Ethernet header (lines 11-14). The declarations inside the header are 
 usually written after referring to the standard specifications of the protocol. Note that in the ``ethernet_t`` 
@@ -80,11 +71,11 @@ parser can be represented as a state machine without cycles (direct acyclic grap
 
 .. image:: images/5A.png
 
-**(a)** 
+.. centered:: **(a)** 
 
 .. image:: images/5B.png
 
-**(b)** 
+.. centered:: **(b)** 
 
 **Figure 5.** Example of a parser. (a) Graphical representation of the parser. (b) In P4, the parser always 
 starts with the initial state called ``start``. First, we transition unconditionally to ``parse_ethernet``. 

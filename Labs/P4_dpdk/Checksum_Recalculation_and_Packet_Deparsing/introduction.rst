@@ -35,15 +35,12 @@ by the other control blocks.
 
 **Figure 1.** Checksum update and deparser implementation.
 
-In the PNA [1]_ architecture, the checksum update is implemented in the deparser control block before 
+In the PNA `[1] <references.html>`_ architecture, the checksum update is implemented in the deparser control block before 
 the packet headers are emitted. In like 7, the ``InternetChecksum()`` instance is needed to create 
 a checksum object with the name checksum. The checksum update is then done in the apply block of 
 the deparser.
 
-.. [1] The P4 Language Consortium, “P4 Portable NIC Architecture (PNA)”, Version 0.5, 2021. 
-   [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
-
-Note that in DPDK the checksum is calculated using the 16-bit one’s complement algorithm [2]_ [3]_. 
+Note that in DPDK the checksum is calculated using the 16-bit one’s complement algorithm `[2] <references.html>`_ `[3] <references.html>`_. 
 Therefore, the data whose checksum is to be computed should be introduced as words of 16 bits 
 or 32 bits. The data usually includes the header fields of the protocol which uses the checksum. 
 The example above shows the header fields of IPv4. In lines 11 and 12 the ``++`` operator is used 
@@ -51,10 +48,6 @@ to concatenate the packet headers into a 16-bit word and a 32-bit word. In line 
 ``checksum.add()`` function takes the data which includes the header fields in this example. 
 Finally, in line 14, the checksum field in the packet is updated using the ``checksum.get()`` 
 function.
-
-.. [2] P4lang, “p4c core.p4”. [Online]. Available: https://github.com/p4lang/p4c/blob/main/p4include/core.p4.
-
-.. [3] P4lang, “pna.p4”, [Online]. Available: https://github.com/p4lang/pna/blob/main/pna.p4
 
 The deparser control block has a ``packet_out`` type in its parameters. The ``packet_out`` 
 type includes the emit method which accepts the headers to be reassembled when the deparser 

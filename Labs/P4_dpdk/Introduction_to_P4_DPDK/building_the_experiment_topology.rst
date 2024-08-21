@@ -7,7 +7,7 @@ them is established.
 
 Namespaces are a feature that partitions Linux resources. Linux namespaces provide independent instances of 
 networks that enable network isolation and independent operations. Each network namespace has its own networking 
-devices, IP addresses, routing tables, and firewall rules [8]_.
+devices, IP addresses, routing tables, and firewall rules `[8] <references.html>`_.
 
 Creating namespaces
 +++++++++++++++++++

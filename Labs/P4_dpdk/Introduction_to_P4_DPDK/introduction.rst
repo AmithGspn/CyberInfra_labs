@@ -29,24 +29,17 @@ drivers that operate as a Poll Mode Driver (PMD). It receives, classifies, and d
 as it consistently polls for incoming packets2. This approach minimizes interrupt services 
 overhead and improves performance. DPDK functionalities can also run on multiple cores with 
 specific tasks running on each core using core affinity which prevents task switching among 
-different cores and therefore enhances performance [1]_.
-
-.. [1] H. Zhu, “Data Plane Development Kit (DPDK): A Software Optimization Guide to the User 
-   Space-based Network Application”, CRC Press, 2020.
+different cores and therefore enhances performance `[1] <references.html>`_.
 
 .. image:: images/fig_1.png
 
 **Figure 1:** Software packet processing. (a) standard packet processing (interrupt-based), 
-(b) kernel-bypass packet processing (polling mode) [2]_.
-
-.. [2] R. Donata, “What is DPDK?”, [Online]. Available: https://tinyurl.com/yfc73h7c.
+(b) kernel-bypass packet processing (polling mode) `[2] <references.html>`_.
 
 In network processing, both the CPU and the NIC frequently require access to data stored in memory 
 such as cache and Dynamic Random Access Memory (DRAM). To optimize memory access, DPDK supports 
 the use Hugepage and memory pools. To sever memory management purposes, DPDK swiftly moves data 
-into the cache to prevent CPU overheads [3]_.
-
-.. [3] DPDK, “Data Plane Development Kit documentation”, Release 2.2.0, 2016.
+into the cache to prevent CPU overheads `[3] <references.html>`_.
 
 DPDK pipeline model
 ~~~~~~~~~~~~~~~~~~~
@@ -57,16 +50,11 @@ a methodology for building a programmable pipeline tailored to serve a specific 
 These pipelines act as modular building blocks that can be interconnected through packet queues 
 to create entire network applications. See Figure 2. A DPDK pipeline has three main components: 
 input ports, tables, and output ports. Each pipeline can be instantiated multiple times, with 
-each instance mapped to a different CPU thread [4]_.
-
-.. [4] Intel, “Introduction to the Data Plane Development Kit (DPDK) Packet Framework”, [Online]. 
-   Available: https://tinyurl.com/254r9sc5.
+each instance mapped to a different CPU thread `[4] <references.html>`_.
 
 .. image:: images/fig_2.png
 
-**Figure 2:** DPDK packet framework pipeline block [5]_.
-
-.. [5] DPDK, “rte_pipeline.h File Reference”, [Online]. Available: https://tinyurl.com/sh9254cs.
+**Figure 2:** DPDK packet framework pipeline block `[5] <references.html>`_.
 
 P4 programming
 ~~~~~~~~~~~~~~
@@ -78,11 +66,7 @@ various network devices. Although initially designed for programmable switches, 
 has expanded to be compatible with a diversity of devices called P4 targets, including SmartNICs. 
 P4 is specifically designed to program the data plane of the target. The P4 code is written by the 
 user in a specific architecture to ensure compatibility with the target. Afterward, the P4 code is 
-ready to be compiled so that it can be executed by the target [6]_.
-
-.. [6] S. Ibanez, “The p4-> netfpga workflow for line-rate packet processing”, Proceedings of the 
-   2019 ACM/SIGDA International Symposium on Field-Programmable Gate Arrays, 2019. 7. P4lang, 
-   “DPDK Backend”, [Online]. Available: https://tinyurl.com/cw29ubxa.
+ready to be compiled so that it can be executed by the target `[6] <references.html>`_.
 
 .. image:: images/fig_3.png
 
@@ -104,7 +88,8 @@ Memory in DPDK
 ~~~~~~~~~~~~~~
 
 Memory management is very important to maintain performance measures. DPDK supports various memory 
-management features such as Hugepages, Non-uniform Memory Access (NUMA) nodes pinning, and memory pools [8]_.
+management features such as Hugepages, Non-uniform Memory Access (NUMA) nodes pinning, and memory pools 
+`[8] <references.html>`_.
 
 A hugepage is a memory management technique used in modern computer systems to improve performance by using 
 larger memory blocks (pages) than the default page size. When the DPDK application initializes and requests 

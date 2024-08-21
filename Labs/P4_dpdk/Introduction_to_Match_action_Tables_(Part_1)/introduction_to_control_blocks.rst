@@ -5,16 +5,10 @@ P4-DPDK supports the PNA architecture which consists of the parser, the pre-cont
 the main control, and the deparser. The Main Control block is essential for processing 
 a packet. It is where the code would be written for the packet processing logic. It 
 aims to transform headers, update stateful elements like counters, meters, and registers, 
-and optionally associate additional user-defined metadata with the packet [1]_ [2]_. For example, 
+and optionally associate additional user-defined metadata with the packet `[1] <references.html>`_ `[2] <references.html>`_. For example, 
 a control block for layer-3 forwarding may require a forwarding table that is indexed by the 
 destination IP address. The control block may include actions to forward a packet when a hit 
 occurs, and to drop the packet otherwise. Figure 1 shows the basic structure of a control block.
-
-.. [1] The P4 Language Consortium, “P4 Portable NIC Architecture (PNA)”, Version 0.5, 2021. 
-    [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
-
-.. [2] P4lang, “pna”, [Online]. 
-    Available: https://github.com/p4lang/pna/tree/main?tab=readme-ov-file
 
 .. image:: images/1.png
 
@@ -40,18 +34,9 @@ Match Types
 ~~~~~~~~~~~
 
 There are three types of matching: exact match, Longest Prefix match (LPM), and ternary match. They are 
-defined in the standard library (core.p4 [3]_). Note that architectures may define and implement additional 
-match types. For example, the PNA [1]_ [4]_ also has matching based on ranges and selectors. In this lab, we will 
+defined in the standard library (core.p4 `[3] <references.html>`_). Note that architectures may define and implement additional 
+match types. For example, the PNA `[1] <references.html>`_ `[4] <references.html>`_ also has matching based on ranges and selectors. In this lab, we will 
 discuss exact matching.
-
-.. [1] The P4 Language Consortium, “P4 Portable NIC Architecture (PNA)”, Version 0.5, 2021. 
-    [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
-
-.. [3] “p4c core.p4”. [Online]. 
-    Available: https://github.com/p4lang/p4c/blob/main/p4include/core.p4.
-
-.. [4] The P4 Language Consortium, “P4 Portable Switch Architecture (PSA)”, 2021. 
-    [Online]. Available: https://p4.org/p4-spec/docs/PSA.html#sec-match-kinds.
 
 Exact match
 ~~~~~~~~~~~
@@ -97,11 +82,8 @@ Table 1 contains the credentials of the virtual machine used for this lab.
 Add_on_miss capability
 ~~~~~~~~~~~~~~~~~~~~~~
 
-The add_on_miss [1]_ table property is uniquely compatible with the P4 PNA. This feature helps by adding rules to a table 
+The add_on_miss `[1] <references.html>`_ table property is uniquely compatible with the P4 PNA. This feature helps by adding rules to a table 
 whenever a match is not found without the control plane’s contribution. Note that this feature is only applicable with 
 exact matching. The add_on_miss parameter takes a boolean value. If set to true, the default action executed adds an 
 entry to the table when a match is not found. Therefore, the new table entry will be a successful match when the next 
 packet is processed.  
-
-.. [1] The P4 Language Consortium, “P4 Portable NIC Architecture (PNA)”, Version 0.5, 2021. 
-    [Online]. Available: https://p4.org/p4-spec/docs/PNA.html
